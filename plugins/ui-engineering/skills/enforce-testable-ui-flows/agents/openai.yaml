@@ -1,0 +1,4 @@
+interface:
+  display_name: "Enforce Testable UI Flows"
+  short_description: "Make UI stories testable without a backend."
+  default_prompt: "Use $enforce-testable-ui-flows to make these UI flows testable without a backend."

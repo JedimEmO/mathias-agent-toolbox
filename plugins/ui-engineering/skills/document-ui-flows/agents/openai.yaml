@@ -1,0 +1,4 @@
+interface:
+  display_name: "Document UI Flows"
+  short_description: "Map app behaviors into flows and user stories."
+  default_prompt: "Use $document-ui-flows to analyze this app's UI behavior and document the user flows."

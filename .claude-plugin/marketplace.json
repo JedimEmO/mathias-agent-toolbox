@@ -56,6 +56,12 @@
       "source": "./plugins/trust-engineering",
       "description": "Aggressive trust-building workflows for testing, verification, regression protection, and security assurance in AI-assisted development",
       "version": "1.0.0"
+    },
+    {
+      "name": "ui-engineering",
+      "source": "./plugins/ui-engineering",
+      "description": "Skills for analyzing, evaluating, documenting, testing, and improving user interfaces, interaction behavior, product flows, reactive code quality, evergreen UI documentation, and UX implementation details",
+      "version": "1.0.0"
     }
   ]
 }

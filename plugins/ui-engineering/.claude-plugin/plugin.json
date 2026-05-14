@@ -1,0 +1,26 @@
+{
+  "name": "ui-engineering",
+  "version": "1.0.0",
+  "description": "Skills for analyzing, evaluating, documenting, testing, and improving user interfaces, interaction behavior, product flows, reactive code quality, evergreen UI documentation, and UX implementation details",
+  "author": {
+    "name": "JedimEmO"
+  },
+  "keywords": [
+    "ui",
+    "ux",
+    "frontend",
+    "user-flows",
+    "interaction-design",
+    "documentation",
+    "testing",
+    "testability",
+    "quality-assurance",
+    "accessibility",
+    "reactivity",
+    "performance",
+    "code-quality",
+    "screenshots",
+    "videos",
+    "evergreen-docs"
+  ]
+}

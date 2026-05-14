@@ -1,0 +1,4 @@
+interface:
+  display_name: "Enforce Reactive UI Quality"
+  short_description: "Keep UI code small, reactive, and precise."
+  default_prompt: "Use $enforce-reactive-ui-quality to improve this UI code without over-rendering."
