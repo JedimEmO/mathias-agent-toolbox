@@ -11,3 +11,4 @@ Skills for building games and interactive applications with the Bevy ECS game en
 - **bevy-input-and-interaction** — Keyboard, mouse, gamepad, touch input, picking/raycasting
 - **bevy-ui-and-audio** — Game menus, HUD, text display, audio playback, spatial audio
 - **bevy-ecosystem** — Third-party crates, version compatibility, migration guidance
+- **bevy-debug-inspection** — Runtime inspection, deterministic debug scenarios, screenshots, diagnostics, BRP
