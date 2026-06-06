@@ -1,5 +1,20 @@
 # Tool Schema Examples
 
+## Contents
+
+- 1. Search Tool — Description and Output Structure
+  - Bad
+  - Good
+- 2. Mutation Tool — Kitchen-Sink vs Separate Actions
+  - Bad
+  - Good
+- 3. Data Retrieval — Unfiltered Dump vs Paginated and Filtered
+  - Bad
+  - Good
+- 4. Error Handling — Raw Strings vs Structured Errors
+  - Bad
+  - Good
+
 Bad vs good tool definitions showing how schema design, descriptions, and error handling affect agent behavior.
 
 ## 1. Search Tool — Description and Output Structure

@@ -1,0 +1,4 @@
+interface:
+  display_name: "Rust CI Tooling"
+  short_description: "CI/CD for Rust projects, clippy lints, rustfmt configuration, feature flag CI matrix, workspa..."
+  default_prompt: "Use $rust-ci-tooling for this task."

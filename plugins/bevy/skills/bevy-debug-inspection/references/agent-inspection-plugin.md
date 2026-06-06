@@ -1,5 +1,14 @@
 # Agent Inspection Plugin
 
+## Contents
+
+- Feature Gate
+- App Wiring
+- Reflectable Data
+- Custom Remote Methods
+- Screenshot Hooks
+- Localhost Safety
+
 Use this when a Bevy project needs a reusable, agent-readable debugging surface. Keep it dev-only and easy to remove from production builds.
 
 ## Feature Gate

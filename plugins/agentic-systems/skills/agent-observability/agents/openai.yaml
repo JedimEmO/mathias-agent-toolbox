@@ -1,0 +1,4 @@
+interface:
+  display_name: "Agent Observability"
+  short_description: "Tracing agent decisions, debugging multi-agent flows, monitoring tool usage, error handling i..."
+  default_prompt: "Use $agent-observability for this task."

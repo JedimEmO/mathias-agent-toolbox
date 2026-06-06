@@ -1,0 +1,36 @@
+{
+  "name": "workflow-quality",
+  "version": "1.0.0",
+  "description": "Workflow-quality skills for completion checks, qualitative harness creation, and non-functional code-quality baselines",
+  "author": {
+    "name": "JedimEmO",
+    "url": "https://github.com/JedimEmO"
+  },
+  "homepage": "https://jedimemo.github.io/mathias-agent-toolbox/",
+  "repository": "https://github.com/JedimEmO/mathias-agent-toolbox",
+  "keywords": [
+    "workflow",
+    "quality",
+    "testing",
+    "code-review",
+    "harness",
+    "completion-checks"
+  ],
+  "skills": "./skills/",
+  "interface": {
+    "displayName": "Workflow Quality",
+    "shortDescription": "Run completion checks and qualitative harness workflows",
+    "longDescription": "Workflow-quality skills for task completion checks, soft harness creation, and qualitative code analysis for non-functional quality tracking.",
+    "developerName": "JedimEmO",
+    "category": "Coding",
+    "capabilities": [
+      "Read",
+      "Write"
+    ],
+    "websiteURL": "https://jedimemo.github.io/mathias-agent-toolbox/",
+    "defaultPrompt": [
+      "Run a completion check or soft quality harness."
+    ],
+    "brandColor": "#7C3AED"
+  }
+}

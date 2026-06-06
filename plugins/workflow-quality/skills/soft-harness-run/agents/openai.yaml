@@ -1,0 +1,4 @@
+interface:
+  display_name: "Soft Harness Run"
+  short_description: "Run a soft harness, check code quality metrics, compare against a quality baseline, view qual..."
+  default_prompt: "Use $soft-harness-run for this task."

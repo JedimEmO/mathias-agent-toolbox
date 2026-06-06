@@ -1,5 +1,15 @@
 # Fake Examples — Supplementary Patterns
 
+## Contents
+
+- Fake with Configurable Failure Modes
+- Second Domain Example — Inventory
+  - Trait (core crate)
+  - Fake (testutils crate)
+- Item Builder
+- Testutils Crate Layout
+- Example Integration Test
+
 Examples that complement the core patterns in the SKILL.md. These cover additional scenarios: configurable failure, notification fakes, inventory domain, and testutils crate layout.
 
 ## Fake with Configurable Failure Modes

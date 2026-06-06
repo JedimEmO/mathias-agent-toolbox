@@ -1,0 +1,4 @@
+interface:
+  display_name: "dwind Project Setup"
+  short_description: "Create a new dwind project, set up dwind in an existing project, configure the Rust-to-WASM b..."
+  default_prompt: "Use $dwind-project-setup for this task."

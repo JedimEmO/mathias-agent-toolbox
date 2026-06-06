@@ -1,5 +1,5 @@
 [book]
-title = "Mathias Marketplace — Plugin Reference"
+title = "Mathias Agent Toolbox — Plugin Reference"
 authors = ["JedimEmO"]
 language = "en"
 src = "book-src"
@@ -8,6 +8,6 @@ src = "book-src"
 build-dir = "book-out"
 
 [output.html]
-git-repository-url = "https://github.com/JedimEmO/my-claude-marketplace"
+git-repository-url = "https://github.com/JedimEmO/mathias-agent-toolbox"
 default-theme = "ayu"
 preferred-dark-theme = "ayu"

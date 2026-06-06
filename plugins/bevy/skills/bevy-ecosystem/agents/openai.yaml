@@ -1,0 +1,4 @@
+interface:
+  display_name: "Bevy Ecosystem"
+  short_description: "Third-party Bevy crates, community plugins, which crate to use for a specific feature, Bevy e..."
+  default_prompt: "Use $bevy-ecosystem for this task."

@@ -1,0 +1,4 @@
+interface:
+  display_name: "Agent Communication"
+  short_description: "How agents communicate, orchestration vs choreography, delegation patterns, agent-to-agent me..."
+  default_prompt: "Use $agent-communication for this task."

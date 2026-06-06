@@ -1,0 +1,4 @@
+interface:
+  display_name: "dwind Reactivity"
+  short_description: "State management, signals, Mutable, reactive updates, conditional rendering, signal compositi..."
+  default_prompt: "Use $dwind-reactivity for this task."

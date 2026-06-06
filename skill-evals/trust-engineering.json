@@ -1,0 +1,20 @@
+{
+  "plugin": "trust-engineering",
+  "scenarios": [
+    {
+      "query": "Raise confidence in this AI-generated parser change before shipping.",
+      "expected_skills": ["enforce-robustness"],
+      "expected_behavior": ["Adds regression and edge-case tests", "Considers property or mutation testing", "Reports verification evidence"]
+    },
+    {
+      "query": "Audit this auth middleware for authorization bypasses and add protection against regressions.",
+      "expected_skills": ["security-audit"],
+      "expected_behavior": ["Traces attacker-controlled inputs", "Checks authz boundaries", "Adds security regression tests where feasible"]
+    },
+    {
+      "query": "Build acceptance tests and coverage around a risky state-machine refactor.",
+      "expected_skills": ["enforce-robustness"],
+      "expected_behavior": ["Targets behavior and invariants", "Covers edge states", "Keeps evidence executable"]
+    }
+  ]
+}

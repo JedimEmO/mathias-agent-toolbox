@@ -1,14 +1,13 @@
 ---
 name: dwind-project-setup
 description: Use when the user asks to create a new dwind project, set up dwind in an existing project, configure the Rust-to-WASM build pipeline, or asks about dwind project structure, Cargo.toml dependencies, rollup config, or wasm-pack setup.
-version: 1.0.0
 ---
 
 # Dwind Project Setup — Scaffolding & Build Config
 
 Set up a new Rust/WASM web application using the dwind stack.
 
-> **Full-stack template:** For a dwind frontend integrated with a RAS backend, see the **scaffold-fullstack** skill.
+> **Full-stack template:** For a dwind frontend integrated with a Rust API Stack backend, see the **scaffold-fullstack** skill.
 
 ## Project Structure
 

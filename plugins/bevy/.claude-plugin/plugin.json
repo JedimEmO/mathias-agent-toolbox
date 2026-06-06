@@ -5,5 +5,13 @@
   "author": {
     "name": "JedimEmO"
   },
-  "keywords": ["rust", "bevy", "game-engine", "ecs", "gamedev", "rendering", "physics"]
+  "keywords": [
+    "rust",
+    "bevy",
+    "game-engine",
+    "ecs",
+    "gamedev",
+    "rendering",
+    "physics"
+  ]
 }

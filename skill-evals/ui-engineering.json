@@ -1,0 +1,20 @@
+{
+  "plugin": "ui-engineering",
+  "scenarios": [
+    {
+      "query": "Review whether this app's UI/UX is satisfactory and backed by meaningful tests.",
+      "expected_skills": ["analyze-ui"],
+      "expected_behavior": ["Observes core flows", "Checks responsive/accessibility basics", "Evaluates test evidence"]
+    },
+    {
+      "query": "Document the user flows in this dashboard, including empty, loading, error, and permission states.",
+      "expected_skills": ["document-ui-flows"],
+      "expected_behavior": ["Assigns stable flow IDs", "Produces readable diagrams", "Separates observed and inferred behavior"]
+    },
+    {
+      "query": "Refactor this frontend so UI flows can be tested without a live backend.",
+      "expected_skills": ["enforce-testable-ui-flows", "enforce-reactive-ui-quality"],
+      "expected_behavior": ["Introduces fakes or service interfaces", "Maps flows to tests", "Keeps state ownership and reactivity precise"]
+    }
+  ]
+}

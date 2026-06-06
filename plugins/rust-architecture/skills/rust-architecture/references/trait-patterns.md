@@ -1,5 +1,16 @@
 # Trait Patterns — Complete Examples
 
+## Contents
+
+- Port Trait + Domain Types (core crate)
+- Diesel Schema & Models (adapter crate)
+- SQLite Adapter — Repository Implementation
+- Service with `Arc<dyn Trait>` Dependencies
+- `thiserror` Enum with `#[from]` Conversions
+- App Wiring with `anyhow`
+- Notifier Trait (secondary port)
+- Async Trait with `async-trait` (object-safe)
+
 Concrete, copy-pasteable examples that complement the patterns in the SKILL.md.
 
 ## Port Trait + Domain Types (core crate)

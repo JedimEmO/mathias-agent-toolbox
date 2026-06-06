@@ -1,0 +1,4 @@
+interface:
+  display_name: "dwind Component"
+  short_description: "Create a component, build a UI element, use a dwui widget, references the #[component] macro..."
+  default_prompt: "Use $dwind-component for this task."

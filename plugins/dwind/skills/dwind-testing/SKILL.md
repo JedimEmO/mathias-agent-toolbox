@@ -1,7 +1,6 @@
 ---
 name: dwind-testing
 description: Use when the user asks about testing dwind/dominator WASM components, writing wasm-bindgen-test tests, DOM isolation between tests, testing reactive signals, or debugging rendering issues in headless browsers. Also triggers on "test my component", "wasm test", "DOM test", "browser test", or "test isolation".
-version: 1.0.0
 ---
 
 # Dwind Testing — wasm-bindgen-test Patterns

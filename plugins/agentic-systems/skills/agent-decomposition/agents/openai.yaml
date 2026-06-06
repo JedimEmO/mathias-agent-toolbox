@@ -1,0 +1,4 @@
+interface:
+  display_name: "Agent Decomposition"
+  short_description: "Splitting a system into agents, agent boundaries, how many agents to use, agent responsibilit..."
+  default_prompt: "Use $agent-decomposition for this task."

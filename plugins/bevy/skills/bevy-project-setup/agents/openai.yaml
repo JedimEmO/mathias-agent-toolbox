@@ -1,0 +1,4 @@
+interface:
+  display_name: "Bevy Project Setup"
+  short_description: "Create a new Bevy project, scaffold a game, configure Cargo.toml for Bevy, set up fast compil..."
+  default_prompt: "Use $bevy-project-setup for this task."

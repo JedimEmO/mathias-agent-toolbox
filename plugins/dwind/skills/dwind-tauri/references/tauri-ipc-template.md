@@ -1,5 +1,10 @@
 # Tauri IPC Bridge Template
 
+## Contents
+
+- Full Module
+- Usage Notes
+
 Complete, copy-pasteable `tauri_ipc.rs` module for a dwind/dominator frontend.
 
 ## Full Module

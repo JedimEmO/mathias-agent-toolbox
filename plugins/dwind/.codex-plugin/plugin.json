@@ -6,9 +6,16 @@
     "name": "JedimEmO",
     "url": "https://github.com/JedimEmO"
   },
-  "homepage": "https://jedimemo.github.io/my-claude-marketplace/",
-  "repository": "https://github.com/JedimEmO/my-claude-marketplace",
-  "keywords": ["rust", "wasm", "ui", "dominator", "futures-signals", "frontend"],
+  "homepage": "https://jedimemo.github.io/mathias-agent-toolbox/",
+  "repository": "https://github.com/JedimEmO/mathias-agent-toolbox",
+  "keywords": [
+    "rust",
+    "wasm",
+    "ui",
+    "dominator",
+    "futures-signals",
+    "frontend"
+  ],
   "skills": "./skills/",
   "interface": {
     "displayName": "dwind",
@@ -16,8 +23,11 @@
     "longDescription": "Skills for building Rust WASM frontends with dwind, dominator, futures-signals, component patterns, styling, events, testing, and Tauri integration.",
     "developerName": "JedimEmO",
     "category": "Coding",
-    "capabilities": ["Read", "Write"],
-    "websiteURL": "https://jedimemo.github.io/my-claude-marketplace/",
+    "capabilities": [
+      "Read",
+      "Write"
+    ],
+    "websiteURL": "https://jedimemo.github.io/mathias-agent-toolbox/",
     "defaultPrompt": [
       "Help me build a dwind UI component or project."
     ],

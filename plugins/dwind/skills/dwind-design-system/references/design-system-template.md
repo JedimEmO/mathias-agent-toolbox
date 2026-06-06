@@ -1,5 +1,17 @@
 # Design System Starter Template
 
+## Contents
+
+- Cargo.toml
+- tokens.css
+- theme/palettes.rs
+- theme/mod.rs
+- mixins/typography.rs
+- mixins/surfaces.rs
+- build.rs
+- lib.rs
+- Usage
+
 Copy-pasteable starter files for a dwind design system crate. Customize the color mappings, spacing scale, and typography roles for your project.
 
 ## Cargo.toml

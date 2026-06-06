@@ -6,8 +6,8 @@
     "name": "JedimEmO",
     "url": "https://github.com/JedimEmO"
   },
-  "homepage": "https://jedimemo.github.io/my-claude-marketplace/",
-  "repository": "https://github.com/JedimEmO/my-claude-marketplace",
+  "homepage": "https://jedimemo.github.io/mathias-agent-toolbox/",
+  "repository": "https://github.com/JedimEmO/mathias-agent-toolbox",
   "keywords": [
     "ui",
     "ux",
@@ -37,7 +37,7 @@
       "Read",
       "Write"
     ],
-    "websiteURL": "https://jedimemo.github.io/my-claude-marketplace/",
+    "websiteURL": "https://jedimemo.github.io/mathias-agent-toolbox/",
     "defaultPrompt": [
       "Evaluate whether this app is satisfactory from a UI/UX and testability perspective.",
       "Analyze this app's UI behavior and document the user flows.",

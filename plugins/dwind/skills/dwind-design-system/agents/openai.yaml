@@ -1,0 +1,4 @@
+interface:
+  display_name: "dwind Design System"
+  short_description: "Design tokens, design system architecture, spacing scales, type scales, color systems, semant..."
+  default_prompt: "Use $dwind-design-system for this task."

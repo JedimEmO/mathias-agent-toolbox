@@ -1,0 +1,4 @@
+interface:
+  display_name: "RAS Setup"
+  short_description: "Create a new RAS project, set up a Rust API Stack workspace, configure Cargo.toml for RAS crates..."
+  default_prompt: "Use $ras-setup for this task."

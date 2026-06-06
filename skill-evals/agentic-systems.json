@@ -1,0 +1,20 @@
+{
+  "plugin": "agentic-systems",
+  "scenarios": [
+    {
+      "query": "Help me decide whether my support automation should be one agent or several specialized agents.",
+      "expected_skills": ["agent-decomposition"],
+      "expected_behavior": ["Starts from one-agent default", "Surfaces concrete split pressures", "Discusses coordination cost"]
+    },
+    {
+      "query": "Plan a multi-agent workflow for incident response with human approvals and audit logs.",
+      "expected_skills": ["plan-agentic-system", "agent-observability", "agent-communication"],
+      "expected_behavior": ["Asks discovery questions before architecture", "Identifies approvals and trust boundaries", "Includes tracing and recovery concerns"]
+    },
+    {
+      "query": "Design tool schemas for an agent that can create tickets and query customer records.",
+      "expected_skills": ["tool-design"],
+      "expected_behavior": ["Defines clear input/output contracts", "Separates read and side-effecting tools", "Includes error and idempotency guidance"]
+    }
+  ]
+}

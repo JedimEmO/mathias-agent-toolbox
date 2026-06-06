@@ -1,65 +1,65 @@
 {
-  "name": "mathias-marketplace",
+  "name": "mathias-agent-toolbox",
   "owner": {
     "name": "JedimEmO"
   },
   "metadata": {
-    "description": "Personal Claude Code plugin marketplace — MCP servers, skills, and tools",
+    "description": "Public Claude Code and Codex plugin marketplace for reusable agent workflows, engineering skills, and Rust tooling",
     "version": "0.1.0",
     "pluginRoot": "./plugins"
   },
   "plugins": [
     {
       "name": "dwind",
-      "source": "./plugins/dwind",
+      "source": "dwind",
       "description": "Skills for building UIs with the dwind/dominator/futures-signals Rust+WASM stack",
       "version": "1.0.0"
     },
     {
       "name": "rust-architecture",
-      "source": "./plugins/rust-architecture",
+      "source": "rust-architecture",
       "description": "Opinionated Rust project structuring — workspace layout, DI patterns, testing strategy, and CI tooling",
       "version": "1.0.0"
     },
     {
-      "name": "ras",
-      "source": "./plugins/ras",
-      "description": "Skills for building type-safe services with the Rust Agent Stack — REST, JSON-RPC, file, and WebSocket APIs via macro-driven code generation",
+      "name": "rust-api-stack",
+      "source": "rust-api-stack",
+      "description": "Skills for building type-safe Rust API Stack services with REST, JSON-RPC, file, and WebSocket APIs via macro-driven code generation",
       "version": "1.0.0"
     },
     {
-      "name": "scaffold",
-      "source": "./plugins/scaffold",
-      "description": "Project scaffolds — full-stack webapp (RAS + dwind) and desktop app (Tauri 2 + dwind)",
+      "name": "rust-app-scaffolds",
+      "source": "rust-app-scaffolds",
+      "description": "Rust application scaffolds for full-stack web apps with Rust API Stack plus dwind and desktop apps with Tauri 2 plus dwind",
       "version": "1.0.0"
     },
     {
-      "name": "claude-workflow",
-      "source": "./plugins/claude-workflow",
-      "description": "Workflow orchestration and qualitative code analysis — task completion checklist, soft harness creation and execution for non-functional quality tracking",
+      "name": "workflow-quality",
+      "source": "workflow-quality",
+      "description": "Workflow-quality skills for completion checks, qualitative harness creation, and non-functional code-quality baselines",
       "version": "1.0.0"
     },
     {
       "name": "bevy",
-      "source": "./plugins/bevy",
+      "source": "bevy",
       "description": "Skills for building games and interactive applications with the Bevy ECS game engine in Rust",
       "version": "1.0.0"
     },
     {
       "name": "agentic-systems",
-      "source": "./plugins/agentic-systems",
+      "source": "agentic-systems",
       "description": "Agentic systems architecture — agent decomposition, communication patterns, tool design, state management, and observability for multi-agent applications",
       "version": "1.0.0"
     },
     {
       "name": "trust-engineering",
-      "source": "./plugins/trust-engineering",
+      "source": "trust-engineering",
       "description": "Aggressive trust-building workflows for testing, verification, regression protection, and security assurance in AI-assisted development",
       "version": "1.0.0"
     },
     {
       "name": "ui-engineering",
-      "source": "./plugins/ui-engineering",
+      "source": "ui-engineering",
       "description": "Skills for analyzing, evaluating, documenting, testing, and improving user interfaces, interaction behavior, product flows, reactive code quality, evergreen UI documentation, and UX implementation details",
       "version": "1.0.0"
     }

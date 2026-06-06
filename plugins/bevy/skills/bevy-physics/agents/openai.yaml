@@ -1,0 +1,4 @@
+interface:
+  display_name: "Bevy Physics"
+  short_description: "Physics simulation in Bevy, collision detection, rigid bodies, colliders, raycasting for phys..."
+  default_prompt: "Use $bevy-physics for this task."

@@ -1,0 +1,20 @@
+{
+  "plugin": "workflow-quality",
+  "scenarios": [
+    {
+      "query": "We are done with this coding task. Run a final completion check.",
+      "expected_skills": ["finish"],
+      "expected_behavior": ["Inspects changed files", "Runs appropriate tests/checks", "Flags leftovers and untracked files"]
+    },
+    {
+      "query": "Create a soft harness for architectural quality in this Rust workspace.",
+      "expected_skills": ["soft-harness-create"],
+      "expected_behavior": ["Defines qualitative checks", "Creates a realistic baseline path", "Avoids irrelevant checks"]
+    },
+    {
+      "query": "Run the soft harness and compare the result against the baseline.",
+      "expected_skills": ["soft-harness-run"],
+      "expected_behavior": ["Reads harness definition", "Reports regressions and improvements", "Updates results without hiding failures"]
+    }
+  ]
+}

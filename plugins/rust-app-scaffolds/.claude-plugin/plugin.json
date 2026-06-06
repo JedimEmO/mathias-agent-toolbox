@@ -1,0 +1,19 @@
+{
+  "name": "rust-app-scaffolds",
+  "version": "1.0.0",
+  "description": "Rust application scaffolds for full-stack web apps with Rust API Stack plus dwind and desktop apps with Tauri 2 plus dwind",
+  "author": {
+    "name": "JedimEmO"
+  },
+  "keywords": [
+    "rust",
+    "scaffold",
+    "fullstack",
+    "tauri",
+    "desktop",
+    "template",
+    "dwind",
+    "rust-api-stack",
+    "ras"
+  ]
+}

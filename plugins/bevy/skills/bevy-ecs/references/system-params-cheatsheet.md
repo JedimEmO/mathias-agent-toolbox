@@ -1,5 +1,13 @@
 # Bevy System Parameters Cheatsheet
 
+## Contents
+
+- System Parameters
+- Query Filter Types
+- Common Query Patterns
+- ParamSet Usage
+- Trigger (Observer Systems)
+
 Complete reference of all system parameter types available in Bevy 0.15+.
 
 ## System Parameters

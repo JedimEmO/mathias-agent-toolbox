@@ -1,7 +1,6 @@
 ---
 name: dwind-reactivity
 description: Use when the user asks about state management, signals, Mutable, reactive updates, conditional rendering, signal composition, child_signal, style_signal, broadcast, map_ref, or encounters signal-related compile errors in a dwind/dominator/futures-signals context.
-version: 1.0.0
 ---
 
 # Dwind Reactivity — Signals & State Management

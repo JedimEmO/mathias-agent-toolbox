@@ -5,5 +5,12 @@
   "author": {
     "name": "JedimEmO"
   },
-  "keywords": ["rust", "wasm", "ui", "dominator", "futures-signals", "frontend"]
+  "keywords": [
+    "rust",
+    "wasm",
+    "ui",
+    "dominator",
+    "futures-signals",
+    "frontend"
+  ]
 }

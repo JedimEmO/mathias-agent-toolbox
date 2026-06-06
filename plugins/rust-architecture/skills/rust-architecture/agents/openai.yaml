@@ -1,0 +1,4 @@
+interface:
+  display_name: "Rust Architecture"
+  short_description: "Dependency injection in Rust, trait-as-interface patterns, module boundaries, hexagonal archi..."
+  default_prompt: "Use $rust-architecture for this task."

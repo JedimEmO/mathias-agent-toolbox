@@ -1,5 +1,21 @@
 # Dwind Component Catalog
 
+## Contents
+
+- DWUI Components
+  - Button (`button!`)
+  - Modal (`modal!`)
+  - TextInput (`text_input!`)
+  - Select (`select!`)
+  - Slider (`slider!`)
+  - Card (`card!`)
+  - Heading (`heading!`)
+  - List (`pretty_list!`)
+- Common Patterns
+  - Signal Props
+  - Validation
+  - Custom Styling via apply
+
 Complete reference for all available components in dwui.
 
 ## DWUI Components

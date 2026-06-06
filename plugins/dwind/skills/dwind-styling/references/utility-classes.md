@@ -1,5 +1,54 @@
 # DWIND Utility Classes Reference
 
+## Contents
+
+- Spacing
+  - Margin
+  - Padding
+  - Gap (Flex/Grid)
+- Typography
+  - Font Family
+  - Font Weight
+  - Font Size
+  - Text Alignment
+  - Line Height
+  - Text Overflow
+- Colors
+  - Background
+  - Text
+  - Border
+  - Gradients
+- Layout
+  - Display
+  - Flexbox
+  - Justify Content
+  - Align Items
+  - Align Self
+  - Grid
+  - Position
+  - Z-Index
+  - Order
+- Sizing
+  - Width
+  - Height
+  - Aspect Ratio
+- Borders
+  - Border Width
+  - Border Style
+  - Border Radius
+  - Divide (between children)
+- Effects
+  - Box Shadow
+  - Ring (outline)
+  - Opacity
+- Interactivity
+  - Cursor
+  - Pointer Events
+  - User Select
+- Overflow
+- Animations
+- Transitions
+
 ## Spacing
 
 ### Margin

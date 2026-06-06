@@ -1,5 +1,23 @@
 # Prompt Templates — Role-Based Examples
 
+## Contents
+
+- 1. Coordinator Agent
+- 2. Specialist Agent (Code Review)
+- Summary
+- Findings
+- Out-of-Scope
+- 3. Validator Agent
+- Result: PASS | FAIL
+- Checks
+- Escalation
+- 4. Transformer Agent (Data Reshaping)
+- Adapting These Templates
+- 5. Composed System — Three Agents Working Together
+  - The Flow
+  - What Gets Injected Where
+  - Key Design Decisions
+
 Four role-based system prompt templates. Each follows the structure: identity, capabilities, constraints, process, output format, context injection.
 
 ## 1. Coordinator Agent

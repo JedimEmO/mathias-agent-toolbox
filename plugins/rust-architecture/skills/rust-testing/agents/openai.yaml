@@ -1,0 +1,4 @@
+interface:
+  display_name: "Rust Testing"
+  short_description: "Testing Rust code, writing test doubles, creating fakes, organizing test modules, integration..."
+  default_prompt: "Use $rust-testing for this task."

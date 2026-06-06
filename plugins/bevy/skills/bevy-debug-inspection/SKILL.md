@@ -1,7 +1,6 @@
 ---
 name: bevy-debug-inspection
 description: Use when the user asks to debug, inspect, test, verify, or diagnose runtime behavior in a Bevy game, including blank screens, rendering bugs, ECS state bugs, missing entities, system ordering, schedules, run conditions, states, input, picking, UI interactions, physics/collision issues, screenshots, videos, Bevy Remote Protocol, runtime inspectors, gizmos, diagnostics, deterministic scenarios, or agent-readable game debug harnesses.
-version: 1.0.0
 ---
 
 # Bevy Debug Inspection - Agent-Readable Runtime Diagnosis

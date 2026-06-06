@@ -1,0 +1,20 @@
+{
+  "plugin": "dwind",
+  "scenarios": [
+    {
+      "query": "Set up a new Rust WASM UI project using dwind, dominator, and futures-signals.",
+      "expected_skills": ["dwind-project-setup"],
+      "expected_behavior": ["Creates a coherent build pipeline", "Lists required tooling", "Keeps project structure Rust/WASM oriented"]
+    },
+    {
+      "query": "Build a reusable form component with reactive validation and accessible styling in dwind.",
+      "expected_skills": ["dwind-component", "dwind-reactivity", "dwind-styling"],
+      "expected_behavior": ["Uses component patterns", "Keeps state reactive", "Applies accessible focus and error states"]
+    },
+    {
+      "query": "Package a dwind frontend into a Tauri 2 desktop app with IPC to Rust commands.",
+      "expected_skills": ["dwind-tauri"],
+      "expected_behavior": ["Separates frontend and Tauri command concerns", "Uses Tauri 2 config patterns", "Covers build and IPC testing"]
+    }
+  ]
+}

@@ -15,7 +15,7 @@ rm -rf "$BOOK_SRC"
 mkdir -p "$BOOK_SRC"
 
 # Generate SUMMARY.md by walking plugins/
-python3 generate-summary.py > "$BOOK_SRC/SUMMARY.md"
+node tools/generate-summary.mjs > "$BOOK_SRC/SUMMARY.md"
 
 # Copy the repo README as the book intro
 if [ -f README.md ]; then

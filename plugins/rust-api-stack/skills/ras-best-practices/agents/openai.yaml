@@ -1,0 +1,4 @@
+interface:
+  display_name: "RAS Best Practices"
+  short_description: "RAS observability, structured errors, generated clients, permission manifests, service tests, and production readiness."
+  default_prompt: "Use $ras-best-practices for this task."

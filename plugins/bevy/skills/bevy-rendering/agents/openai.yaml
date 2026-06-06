@@ -1,0 +1,4 @@
+interface:
+  display_name: "Bevy Rendering"
+  short_description: "2D or 3D rendering in Bevy, sprites, meshes, materials, cameras, lighting, shaders, textures..."
+  default_prompt: "Use $bevy-rendering for this task."

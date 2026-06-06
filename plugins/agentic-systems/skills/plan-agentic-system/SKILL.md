@@ -1,7 +1,6 @@
 ---
 name: plan-agentic-system
 description: Use when the user wants to plan, scope, or design a new agentic system from scratch through an interactive discovery process. Triggers on "plan an agent system", "help me design my agents", "I want to build a multi-agent system", "plan agentic system", or when the user needs guided discovery of what their agent architecture should look like.
-version: 1.0.0
 ---
 
 # Plan Agentic System — Interactive Architecture Discovery
@@ -12,7 +11,7 @@ An interactive, question-driven process for designing an agentic system. Your jo
 
 ## How This Works
 
-This is a multi-phase conversation, not a one-shot generation. Each phase ends with questions to the user. Do not proceed to the next phase until you have answers. Use the AskUserQuestion tool to ask structured questions with options where appropriate — this helps the user think through choices they might not have considered.
+This is a multi-phase conversation, not a one-shot generation. Each phase ends with questions to the user. Do not proceed to the next phase until you have answers. Ask structured questions with clear options where appropriate — this helps the user think through choices they might not have considered.
 
 At the end, you produce a complete architecture document using patterns from the agentic-systems skills: `agent-decomposition`, `agent-communication`, `tool-design`, `agent-state`, and `agent-observability`.
 
@@ -113,8 +112,8 @@ For each: ask about API availability, authentication requirements, and rate limi
 
 **Probe for model strategy:**
 - "Do all agents need the same model, or can some use cheaper models for simpler tasks?"
-- "What's your latency tolerance? Opus thinks deeper but slower. Haiku is fast but shallower. The right mix depends on your tasks."
-- "How do you want to handle model deprecation? When Claude's next version ships, what's your migration plan?"
+- "What's your latency tolerance? Deep-reasoning models are slower but stronger. Lightweight models are faster but shallower. The right mix depends on your tasks."
+- "How do you want to handle model deprecation? When your provider ships a replacement model, what's your migration plan?"
 
 ---
 

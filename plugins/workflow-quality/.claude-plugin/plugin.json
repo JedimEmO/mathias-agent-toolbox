@@ -1,0 +1,16 @@
+{
+  "name": "workflow-quality",
+  "version": "1.0.0",
+  "description": "Workflow-quality skills for completion checks, qualitative harness creation, and non-functional code-quality baselines",
+  "author": {
+    "name": "JedimEmO"
+  },
+  "keywords": [
+    "workflow",
+    "quality",
+    "testing",
+    "code-review",
+    "harness",
+    "completion-checks"
+  ]
+}

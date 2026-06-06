@@ -1,0 +1,4 @@
+interface:
+  display_name: "Agent State"
+  short_description: "State management in agent systems, where agent state lives, prompt architecture, system promp..."
+  default_prompt: "Use $agent-state for this task."

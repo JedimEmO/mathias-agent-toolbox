@@ -1,7 +1,6 @@
 ---
 name: bevy-rendering
 description: Use when the user asks about 2D or 3D rendering in Bevy, sprites, meshes, materials, cameras, lighting, shaders, textures, transforms, visibility, render layers, viewports, or visual aspects of a Bevy game.
-version: 1.0.0
 ---
 
 # Bevy Rendering — 2D & 3D Visuals

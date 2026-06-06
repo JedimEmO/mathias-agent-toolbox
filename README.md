@@ -1,8 +1,8 @@
-# my-claude-marketplace
+# Mathias Agent Toolbox
 
-[**Browse the plugin reference book**](https://jedimemo.github.io/my-claude-marketplace/)
+[**Browse the plugin reference book**](https://jedimemo.github.io/mathias-agent-toolbox/)
 
-Personal Claude Code and Codex plugin marketplace - MCP servers, skills, and tools.
+Public Claude Code and Codex plugin marketplace for reusable agent workflows, engineering skills, Rust tooling, and UI quality workflows.
 
 ## Usage
 
@@ -11,13 +11,13 @@ Personal Claude Code and Codex plugin marketplace - MCP servers, skills, and too
 Add this marketplace:
 
 ```
-/plugin marketplace add https://github.com/JedimEmO/my-claude-marketplace.git
+/plugin marketplace add https://github.com/JedimEmO/mathias-agent-toolbox.git
 ```
 
 Install a plugin:
 
 ```
-/plugin install <plugin-name>@my-claude-marketplace
+/plugin install <plugin-name>@mathias-agent-toolbox
 ```
 
 ### Codex
@@ -25,10 +25,10 @@ Install a plugin:
 Add this marketplace:
 
 ```bash
-codex plugin marketplace add JedimEmO/my-claude-marketplace
+codex plugin marketplace add JedimEmO/mathias-agent-toolbox
 ```
 
-Then open `/plugins` in Codex, choose **Mathias Marketplace**, and install the plugins you want.
+Then open `/plugins` in Codex, choose **Mathias Agent Toolbox**, and install the plugins you want.
 
 ## Adding a plugin
 
@@ -86,3 +86,13 @@ Codex plugin manifests should point at the shared skill tree:
 ```
 
 If the plugin has `.mcp.json`, add `"mcpServers": "./.mcp.json"` to `plugins/my-plugin/.codex-plugin/plugin.json`.
+
+## Quality checks
+
+Run the skill metadata/progressive-disclosure audit:
+
+```bash
+tools/audit-skills.mjs
+```
+
+Plugin-level trigger and behavior scenarios live in `skill-evals/`.

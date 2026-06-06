@@ -1,0 +1,4 @@
+interface:
+  display_name: "RAS Security"
+  short_description: "Authentication, authorization, permission groups, JWT sessions, OAuth2, AuthProvider wiring, and permission manifests."
+  default_prompt: "Use $ras-security for this task."

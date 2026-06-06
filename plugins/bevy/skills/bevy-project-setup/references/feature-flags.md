@@ -1,5 +1,19 @@
 # Bevy Feature Flags Reference
 
+## Contents
+
+- Core Features
+- Windowing & Input
+- Rendering
+- Audio
+- Image Formats
+- Platform Features
+- Development & Debugging
+- Profiling & Tracing
+- Miscellaneous
+- Example: Minimal 2D Game
+- Example: Headless Server
+
 Feature flags for Bevy 0.15. Disable `default-features` and pick what you need for minimal builds, or keep defaults for full-featured games.
 
 ## Core Features

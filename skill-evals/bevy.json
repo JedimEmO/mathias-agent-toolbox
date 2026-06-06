@@ -1,0 +1,20 @@
+{
+  "plugin": "bevy",
+  "scenarios": [
+    {
+      "query": "My Bevy game opens to a blank window. Help me debug it with runtime evidence.",
+      "expected_skills": ["bevy-debug-inspection"],
+      "expected_behavior": ["Builds a narrow reproduction", "Correlates screenshots with ECS state", "Checks camera, visibility, assets, and schedules"]
+    },
+    {
+      "query": "Create a Bevy project with fast compile settings, feature flags, and a clean game-state structure.",
+      "expected_skills": ["bevy-project-setup", "bevy-ecs"],
+      "expected_behavior": ["Uses Bevy-specific Cargo guidance", "Explains app/plugin organization", "Avoids unnecessary third-party crates"]
+    },
+    {
+      "query": "Add keyboard movement, mouse picking, physics colliders, and a HUD to my Bevy prototype.",
+      "expected_skills": ["bevy-input-and-interaction", "bevy-physics", "bevy-ui-and-audio"],
+      "expected_behavior": ["Uses ECS resources and queries correctly", "Chooses one physics backend", "Separates gameplay input from UI interaction"]
+    }
+  ]
+}

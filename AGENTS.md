@@ -12,9 +12,10 @@ This repository is a shared Claude Code and Codex plugin marketplace. The reusab
 ./build-book.sh          # Build static HTML book to book-out/
 ./build-book.sh serve    # Live-reload dev server
 ./build-book.sh clean    # Remove generated book-src/ and book-out/
+tools/audit-skills.mjs   # Check skill metadata and progressive-disclosure hygiene
 ```
 
-The build pipeline runs `generate-summary.py`, which walks `plugins/`, generates `book-src/SUMMARY.md`, symlinks Markdown files into `book-src/`, then runs `mdbook build`.
+The build pipeline runs `tools/generate-summary.mjs`, which walks `plugins/`, generates `book-src/SUMMARY.md`, symlinks Markdown files into `book-src/`, then runs `mdbook build`.
 
 ## Plugin Structure
 
@@ -70,8 +71,8 @@ Do not assume Codex auto-discovers `.mcp.json` just because the file exists. Cla
 Claude Code marketplace usage:
 
 ```text
-/plugin marketplace add https://github.com/JedimEmO/my-claude-marketplace.git
-/plugin install <plugin-name>@my-claude-marketplace
+/plugin marketplace add https://github.com/JedimEmO/mathias-agent-toolbox.git
+/plugin install <plugin-name>@mathias-agent-toolbox
 ```
 
 Codex marketplace usage:
@@ -88,7 +89,8 @@ After adding or updating Codex plugin metadata, restart Codex and verify the plu
 - `.agents/plugins/marketplace.json` - Codex plugin registry
 - `plugins/*/.claude-plugin/plugin.json` - Claude per-plugin metadata
 - `plugins/*/.codex-plugin/plugin.json` - Codex per-plugin metadata
-- `generate-summary.py` - discovers plugin Markdown and generates mdBook input
+- `tools/generate-summary.mjs` - discovers plugin Markdown and generates mdBook input
+- `tools/audit-skills.mjs` - checks skill metadata and progressive-disclosure hygiene
 - `book.toml` - mdBook config
 - `.github/workflows/deploy-book.yml` - GitHub Pages deployment on pushes to `master`
 
@@ -96,5 +98,5 @@ After adding or updating Codex plugin metadata, restart Codex and verify the plu
 
 - `book-src/` and `book-out/` are generated and gitignored; never edit them directly.
 - Build output uses symlinks from `book-src/` to `plugins/`, so edits to plugin Markdown files are visible during `./build-book.sh serve`.
-- `generate-summary.py` extracts H1 headings from Markdown files for TOC titles, falling back to humanized filenames.
+- `tools/generate-summary.mjs` extracts H1 headings from Markdown files for TOC titles, falling back to humanized filenames.
 - CI is triggered on pushes to `master`, not `main`.

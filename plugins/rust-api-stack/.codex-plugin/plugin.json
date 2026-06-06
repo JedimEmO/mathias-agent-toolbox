@@ -1,0 +1,38 @@
+{
+  "name": "rust-api-stack",
+  "version": "1.0.0",
+  "description": "Skills for building type-safe Rust API Stack services with REST, JSON-RPC, file, and WebSocket APIs via macro-driven code generation",
+  "author": {
+    "name": "JedimEmO",
+    "url": "https://github.com/JedimEmO"
+  },
+  "homepage": "https://jedimemo.github.io/rust-api-stack/",
+  "repository": "https://github.com/JedimEmO/rust-api-stack",
+  "keywords": [
+    "rust",
+    "rust-api-stack",
+    "ras",
+    "rest-api",
+    "json-rpc",
+    "websocket",
+    "code-generation",
+    "service"
+  ],
+  "skills": "./skills/",
+  "interface": {
+    "displayName": "Rust API Stack",
+    "shortDescription": "Build Rust API Stack services",
+    "longDescription": "Skills for building type-safe Rust API Stack services with REST, JSON-RPC, file, and WebSocket APIs through macro-driven service definitions.",
+    "developerName": "JedimEmO",
+    "category": "Coding",
+    "capabilities": [
+      "Read",
+      "Write"
+    ],
+    "websiteURL": "https://jedimemo.github.io/rust-api-stack/",
+    "defaultPrompt": [
+      "Help me design or implement a Rust API Stack service."
+    ],
+    "brandColor": "#0F766E"
+  }
+}

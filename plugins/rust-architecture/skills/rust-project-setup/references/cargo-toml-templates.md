@@ -1,5 +1,18 @@
 # Cargo.toml Templates
 
+## Contents
+
+- Workspace Root (no package)
+- Library Crate (core/domain)
+- Adapter Crate (infra/client)
+- Binary Crate (app)
+- Test Utilities Crate
+- Feature Flag Patterns
+  - Optional dependency gating
+  - Feature-gated module
+  - Propagating features across workspace crates
+- Single-Crate Project (still a workspace)
+
 ## Workspace Root (no package)
 
 ```toml

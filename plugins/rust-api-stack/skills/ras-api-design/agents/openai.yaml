@@ -1,0 +1,4 @@
+interface:
+  display_name: "RAS API Design"
+  short_description: "Define REST endpoints, JSON-RPC methods, file routes, WebSocket services, specs, and generated clients with RAS..."
+  default_prompt: "Use $ras-api-design for this task."

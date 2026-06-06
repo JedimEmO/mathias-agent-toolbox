@@ -1,7 +1,6 @@
 ---
 name: agent-state
 description: Use when the user asks about state management in agent systems, where agent state lives, prompt architecture, system prompt design, context window management, shared state between agents, agent memory, context compression, or prompt versioning.
-version: 1.0.0
 ---
 
 # Agent State — Context, Prompts, and Shared Memory

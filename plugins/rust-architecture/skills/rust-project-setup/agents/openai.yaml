@@ -1,0 +1,4 @@
+interface:
+  display_name: "Rust Project Setup"
+  short_description: "Scaffold a new Rust project, set up a Cargo workspace, configure Cargo.toml, manage workspace..."
+  default_prompt: "Use $rust-project-setup for this task."

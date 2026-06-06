@@ -1,0 +1,4 @@
+interface:
+  display_name: "Bevy ECS"
+  short_description: "Bevy's Entity Component System, defining components, writing systems, queries, commands, reso..."
+  default_prompt: "Use $bevy-ecs for this task."

@@ -1,5 +1,21 @@
 # avian vs bevy_rapier — Side-by-Side Comparison
 
+## Contents
+
+- Cargo.toml Dependencies
+- Plugin Setup
+- RigidBody Types
+- Collider Creation
+- Velocity and Force API
+- Collision Events
+- Collision Layers
+- Sensors
+- Raycasting
+- Character Controller
+- Joints
+- Key Differences and Tradeoffs
+- When to Choose Which
+
 ## Cargo.toml Dependencies
 
 | Dimension | avian | bevy_rapier |

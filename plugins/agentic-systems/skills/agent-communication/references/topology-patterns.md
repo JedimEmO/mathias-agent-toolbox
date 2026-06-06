@@ -1,5 +1,14 @@
 # Topology Patterns — Visual Reference
 
+## Contents
+
+- Hub-and-Spoke (Coordinator Pattern)
+- Pipeline (Sequential Chain)
+- Map-Reduce (Fan-Out / Fan-In)
+- Hierarchical (Two-Level Coordination)
+- Peer Mesh (Decentralized)
+- Comparison Table
+
 Common agent topologies with trade-offs. Pick the simplest topology that handles your workflow. You can always add complexity later; removing it is much harder.
 
 ## Hub-and-Spoke (Coordinator Pattern)

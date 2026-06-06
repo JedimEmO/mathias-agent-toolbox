@@ -1,0 +1,4 @@
+interface:
+  display_name: "Finish"
+  short_description: "The user says they are done, asks to finish a task, wants to verify their work is complete, w..."
+  default_prompt: "Use $finish for this task."

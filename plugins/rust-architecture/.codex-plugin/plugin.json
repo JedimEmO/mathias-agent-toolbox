@@ -1,14 +1,21 @@
 {
   "name": "rust-architecture",
   "version": "1.0.0",
-  "description": "Opinionated Rust project structuring — workspace layout, DI patterns, testing strategy, and CI tooling",
+  "description": "Opinionated Rust project structuring \u2014 workspace layout, DI patterns, testing strategy, and CI tooling",
   "author": {
     "name": "JedimEmO",
     "url": "https://github.com/JedimEmO"
   },
-  "homepage": "https://jedimemo.github.io/my-claude-marketplace/",
-  "repository": "https://github.com/JedimEmO/my-claude-marketplace",
-  "keywords": ["rust", "architecture", "dependency-injection", "testing", "ci-cd", "workspace"],
+  "homepage": "https://jedimemo.github.io/mathias-agent-toolbox/",
+  "repository": "https://github.com/JedimEmO/mathias-agent-toolbox",
+  "keywords": [
+    "rust",
+    "architecture",
+    "dependency-injection",
+    "testing",
+    "ci-cd",
+    "workspace"
+  ],
   "skills": "./skills/",
   "interface": {
     "displayName": "Rust Architecture",
@@ -16,8 +23,11 @@
     "longDescription": "Opinionated Rust architecture skills for workspace layout, dependency inversion, trait-as-interface patterns, testing strategy, project setup, and CI tooling.",
     "developerName": "JedimEmO",
     "category": "Coding",
-    "capabilities": ["Read", "Write"],
-    "websiteURL": "https://jedimemo.github.io/my-claude-marketplace/",
+    "capabilities": [
+      "Read",
+      "Write"
+    ],
+    "websiteURL": "https://jedimemo.github.io/mathias-agent-toolbox/",
     "defaultPrompt": [
       "Help me structure this Rust project."
     ],

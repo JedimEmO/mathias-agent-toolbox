@@ -1,0 +1,4 @@
+interface:
+  display_name: "Bevy Input And Interaction"
+  short_description: "Handling keyboard input, mouse input, gamepad/controller input, touch input, picking/raycasti..."
+  default_prompt: "Use $bevy-input-and-interaction for this task."

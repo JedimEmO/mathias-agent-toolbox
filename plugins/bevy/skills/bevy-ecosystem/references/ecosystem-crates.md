@@ -1,5 +1,39 @@
 # Ecosystem Crates Reference
 
+## Contents
+
+- Physics
+  - avian3d / avian2d
+  - bevy_rapier3d / bevy_rapier2d
+- Input
+  - leafwing-input-manager
+- Assets & Loading
+  - bevy_asset_loader
+  - iyes_progress
+- Animation
+  - bevy_tweening
+- UI & Editor
+  - bevy_egui
+  - bevy_cosmic_edit
+- Networking
+  - lightyear
+  - bevy_replicon
+  - bevy_renet
+- Debug & Dev Tools
+  - bevy-inspector-egui
+  - bevy_screen_diagnostics
+- Tilemap & Level Design
+  - bevy_ecs_tilemap
+- Particles & VFX
+  - bevy_hanabi
+- Camera
+  - bevy_pancam
+  - bevy_flycam
+- Persistence & Serialization
+  - bevy_pkv
+- Audio (Third-Party)
+  - bevy_kira_audio
+
 Detailed reference for recommended third-party Bevy crates. All versions listed target **Bevy 0.15.x**. Always verify compatibility before adding a dependency.
 
 ---

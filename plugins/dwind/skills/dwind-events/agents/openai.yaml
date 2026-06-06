@@ -1,0 +1,4 @@
+interface:
+  display_name: "dwind Events"
+  short_description: "Mouse events, keyboard events, click handling, drag interactions, event propagation, stopProp..."
+  default_prompt: "Use $dwind-events for this task."

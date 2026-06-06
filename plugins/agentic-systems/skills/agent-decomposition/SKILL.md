@@ -1,7 +1,6 @@
 ---
 name: agent-decomposition
 description: Use when the user asks about splitting a system into agents, agent boundaries, how many agents to use, agent responsibility assignment, capability allocation, or agent topology design. Also triggers on "should this be one agent or multiple", "agent architecture", or "agent roles".
-version: 1.0.0
 ---
 
 # Agent Decomposition — Boundaries, Roles, and Topologies
@@ -19,7 +18,7 @@ Only decompose when at least one of these concrete pressures exists:
 | **Context window saturation** | Agent performance degrades as conversation grows; it forgets earlier instructions or loses track of state | A coding agent working across a 500-file monorepo that needs domain docs, API specs, and test fixtures simultaneously |
 | **Role specialization** | The system prompt tries to be two things at once and does both poorly | "You are an expert code reviewer AND a creative copywriter" — these require fundamentally different personalities |
 | **Trust boundaries** | Different tasks need different permission levels | One task needs filesystem write access; another should only read from a web API |
-| **Model cost differentiation** | Some subtasks are simple extraction; others need deep reasoning | Use Opus for architectural decisions, Haiku for parsing log files |
+| **Model cost differentiation** | Some subtasks are simple extraction; others need deep reasoning | Use a deep-reasoning model for architectural decisions and a lightweight model for parsing log files |
 | **Independent scaling** | One capability is called 100x more than others | A data-extraction pipeline that fans out to dozens of parallel workers |
 
 **Priority order when multiple pressures exist:** context window saturation is the strongest signal — if an agent is hitting context limits, split immediately. Role specialization is next — contradictory system prompts degrade everything. Trust boundaries come third. Cost differentiation and independent scaling are weaker signals that rarely justify splitting on their own.

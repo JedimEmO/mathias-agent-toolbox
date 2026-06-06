@@ -1,5 +1,17 @@
 # Debug Playbooks
 
+## Contents
+
+- Blank Or Black Screen
+- Entity Missing Or Wrong Data
+- System Not Running
+- Input Or Picking Bug
+- UI Bug
+- Physics Or Collision Bug
+- Schedule, State, Or Ordering Bug
+- Asset Loading Bug
+- Performance Or Stutter
+
 Use these symptom paths to choose probes. Stop once evidence identifies the root cause; do not add every probe blindly.
 
 ## Blank Or Black Screen

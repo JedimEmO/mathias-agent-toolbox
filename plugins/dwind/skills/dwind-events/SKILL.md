@@ -1,7 +1,6 @@
 ---
 name: dwind-events
 description: Use when the user asks about mouse events, keyboard events, click handling, drag interactions, event propagation, stopPropagation, preventDefault, event_with_options, global_event, or handling user input in dominator. Also triggers on "click handler", "mouse event", "keyboard shortcut", "event bubbling", "passive listener", or "pointer events" in a dwind/dominator context.
-version: 1.0.0
 ---
 
 # Dwind Events — Mouse, Keyboard, and Event Handling in Dominator

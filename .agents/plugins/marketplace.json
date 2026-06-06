@@ -1,7 +1,7 @@
 {
-  "name": "mathias-marketplace",
+  "name": "mathias-agent-toolbox",
   "interface": {
-    "displayName": "Mathias Marketplace"
+    "displayName": "Mathias Agent Toolbox"
   },
   "plugins": [
     {
@@ -29,10 +29,10 @@
       "category": "Coding"
     },
     {
-      "name": "ras",
+      "name": "rust-api-stack",
       "source": {
         "source": "local",
-        "path": "./plugins/ras"
+        "path": "./plugins/rust-api-stack"
       },
       "policy": {
         "installation": "AVAILABLE",
@@ -41,10 +41,10 @@
       "category": "Coding"
     },
     {
-      "name": "scaffold",
+      "name": "rust-app-scaffolds",
       "source": {
         "source": "local",
-        "path": "./plugins/scaffold"
+        "path": "./plugins/rust-app-scaffolds"
       },
       "policy": {
         "installation": "AVAILABLE",
@@ -53,10 +53,10 @@
       "category": "Coding"
     },
     {
-      "name": "claude-workflow",
+      "name": "workflow-quality",
       "source": {
         "source": "local",
-        "path": "./plugins/claude-workflow"
+        "path": "./plugins/workflow-quality"
       },
       "policy": {
         "installation": "AVAILABLE",

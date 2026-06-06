@@ -1,5 +1,16 @@
 # Tracing Patterns — Formats and Debugging Walkthroughs
 
+## Contents
+
+- Trace Format
+  - Span Schema
+  - Tool Call Span
+- Example: Full Trace of a Multi-Agent Task
+- Debugging Walkthrough: Agent Stuck in a Loop
+- Debugging Walkthrough: Context Degradation
+- Debugging Walkthrough: Silent Tool Failure
+- Key Metrics Dashboard
+
 ## Trace Format
 
 A trace captures the full lifecycle of a multi-agent task. Each entry is a span.

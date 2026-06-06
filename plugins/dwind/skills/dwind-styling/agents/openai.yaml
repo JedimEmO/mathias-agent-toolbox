@@ -1,0 +1,4 @@
+interface:
+  display_name: "dwind Styling"
+  short_description: "Styling, CSS classes, colors, spacing, layout, responsive design, hover/focus states, animati..."
+  default_prompt: "Use $dwind-styling for this task."

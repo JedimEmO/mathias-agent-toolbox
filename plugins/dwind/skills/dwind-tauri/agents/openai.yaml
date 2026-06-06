@@ -1,0 +1,4 @@
+interface:
+  display_name: "dwind Tauri"
+  short_description: "Build a Tauri desktop application with a dwind/dominator frontend, set up Tauri with Rust WAS..."
+  default_prompt: "Use $dwind-tauri for this task."

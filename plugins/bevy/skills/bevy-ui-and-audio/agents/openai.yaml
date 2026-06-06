@@ -1,0 +1,4 @@
+interface:
+  display_name: "Bevy UI And Audio"
+  short_description: "Building UI in Bevy, game menus, HUD, health bars, buttons, text display, UI layout, or audio..."
+  default_prompt: "Use $bevy-ui-and-audio for this task."

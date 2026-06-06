@@ -1,0 +1,20 @@
+{
+  "plugin": "rust-api-stack",
+  "scenarios": [
+    {
+      "query": "Create a Rust API Stack service workspace with REST endpoints and generated clients.",
+      "expected_skills": ["ras-setup", "ras-api-design"],
+      "expected_behavior": ["Places macros in an API crate", "Keeps domain logic separate", "Explains generated router/client outputs"]
+    },
+    {
+      "query": "Add auth, permissions, and session-based JWT validation to a Rust API Stack service.",
+      "expected_skills": ["ras-security"],
+      "expected_behavior": ["Uses AuthProvider and IdentityProvider boundaries", "Maps endpoint auth levels", "Covers permission groups and manifests"]
+    },
+    {
+      "query": "Make my Rust API Stack service production-ready with observability and tests.",
+      "expected_skills": ["ras-best-practices"],
+      "expected_behavior": ["Adds structured errors", "Wires usage/duration tracking", "Uses in-process service tests"]
+    }
+  ]
+}

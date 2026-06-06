@@ -1,5 +1,14 @@
 # Cargo Config Templates for Bevy
 
+## Contents
+
+- Linux (mold linker)
+- macOS
+- Windows (rust-lld)
+- Cross-platform (auto-detect)
+- Cargo.toml Profile Settings
+- Cranelift Backend (Nightly Only)
+
 Copy-pasteable `.cargo/config.toml` templates for fast Bevy compile times.
 
 ## Linux (mold linker)

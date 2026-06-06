@@ -1,5 +1,15 @@
 # Runtime Artifacts
 
+## Contents
+
+- Artifact Bundle
+- World Snapshot Shape
+- Check Results
+- BRP Request Examples
+- Screenshot Rules
+- Regression Choices
+- Final Debug Report
+
 Use artifacts to make Bevy debugging repeatable. The agent should be able to rerun a scenario and compare evidence without relying on memory or manual play.
 
 ## Artifact Bundle

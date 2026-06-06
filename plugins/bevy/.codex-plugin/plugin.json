@@ -6,9 +6,17 @@
     "name": "JedimEmO",
     "url": "https://github.com/JedimEmO"
   },
-  "homepage": "https://jedimemo.github.io/my-claude-marketplace/",
-  "repository": "https://github.com/JedimEmO/my-claude-marketplace",
-  "keywords": ["rust", "bevy", "game-engine", "ecs", "gamedev", "rendering", "physics"],
+  "homepage": "https://jedimemo.github.io/mathias-agent-toolbox/",
+  "repository": "https://github.com/JedimEmO/mathias-agent-toolbox",
+  "keywords": [
+    "rust",
+    "bevy",
+    "game-engine",
+    "ecs",
+    "gamedev",
+    "rendering",
+    "physics"
+  ],
   "skills": "./skills/",
   "interface": {
     "displayName": "Bevy",
@@ -16,8 +24,11 @@
     "longDescription": "Skills for Bevy ECS, project setup, rendering, physics, input and interaction, UI, audio, and ecosystem choices for Rust games and interactive applications.",
     "developerName": "JedimEmO",
     "category": "Coding",
-    "capabilities": ["Read", "Write"],
-    "websiteURL": "https://jedimemo.github.io/my-claude-marketplace/",
+    "capabilities": [
+      "Read",
+      "Write"
+    ],
+    "websiteURL": "https://jedimemo.github.io/mathias-agent-toolbox/",
     "defaultPrompt": [
       "Help me build or structure a Bevy game."
     ],

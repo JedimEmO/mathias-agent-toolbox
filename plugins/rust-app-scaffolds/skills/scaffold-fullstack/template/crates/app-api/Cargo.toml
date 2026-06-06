@@ -1,0 +1,39 @@
+[package]
+name = "app-api"
+version = "0.1.0"
+edition.workspace = true
+
+[lints]
+workspace = true
+
+[dependencies]
+app-core = { path = "../app-core" }
+ras-rest-macro.workspace = true
+ras-rest-core = { workspace = true, optional = true }
+ras-auth-core = { workspace = true, optional = true }
+ras-transport-core = { workspace = true, optional = true }
+ras-permission-manifest = { workspace = true, optional = true }
+serde.workspace = true
+serde_json.workspace = true
+schemars.workspace = true
+async-trait = { workspace = true, optional = true }
+chrono.workspace = true
+uuid.workspace = true
+axum = { workspace = true, optional = true }
+axum-extra = { workspace = true, optional = true }
+tokio = { workspace = true, optional = true }
+tracing.workspace = true
+
+[features]
+default = []
+server = [
+    "ras-rest-macro/server",
+    "dep:ras-rest-core",
+    "dep:ras-auth-core",
+    "dep:async-trait",
+    "dep:axum",
+    "dep:axum-extra",
+    "dep:tokio",
+]
+client = ["ras-rest-macro/reqwest", "ras-transport-core/reqwest"]
+permissions = ["ras-rest-macro/permissions", "dep:ras-permission-manifest"]

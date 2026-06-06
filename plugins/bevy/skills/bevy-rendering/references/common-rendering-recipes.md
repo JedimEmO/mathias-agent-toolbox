@@ -1,5 +1,14 @@
 # Common Rendering Recipes
 
+## Contents
+
+- 1. Animated Sprite Sheet
+- 2. 3D Scene with Lighting
+- 3. Split-Screen Two-Camera Setup
+- 4. Loading and Displaying a GLTF Model
+- 5. Billboard Text That Always Faces the Camera
+- 6. Render-to-Texture (Camera Rendering to Image Used as Material)
+
 Minimal, copy-pasteable examples for frequent Bevy 0.15+ rendering tasks.
 
 ---

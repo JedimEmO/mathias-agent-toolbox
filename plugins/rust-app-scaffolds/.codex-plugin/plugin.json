@@ -1,0 +1,39 @@
+{
+  "name": "rust-app-scaffolds",
+  "version": "1.0.0",
+  "description": "Rust application scaffolds for full-stack web apps with Rust API Stack plus dwind and desktop apps with Tauri 2 plus dwind",
+  "author": {
+    "name": "JedimEmO",
+    "url": "https://github.com/JedimEmO"
+  },
+  "homepage": "https://jedimemo.github.io/mathias-agent-toolbox/",
+  "repository": "https://github.com/JedimEmO/mathias-agent-toolbox",
+  "keywords": [
+    "rust",
+    "scaffold",
+    "fullstack",
+    "tauri",
+    "desktop",
+    "template",
+    "dwind",
+    "rust-api-stack",
+    "ras"
+  ],
+  "skills": "./skills/",
+  "interface": {
+    "displayName": "Rust App Scaffolds",
+    "shortDescription": "Generate Rust full-stack and desktop starter projects",
+    "longDescription": "Project scaffolds for full-stack Rust API Stack plus dwind web applications and Tauri 2 plus dwind desktop applications, including templates and customization guidance.",
+    "developerName": "JedimEmO",
+    "category": "Coding",
+    "capabilities": [
+      "Read",
+      "Write"
+    ],
+    "websiteURL": "https://jedimemo.github.io/mathias-agent-toolbox/",
+    "defaultPrompt": [
+      "Scaffold a Rust full-stack or desktop project."
+    ],
+    "brandColor": "#16A34A"
+  }
+}

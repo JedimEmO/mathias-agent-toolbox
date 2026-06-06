@@ -1,0 +1,4 @@
+interface:
+  display_name: "Scaffold Desktop"
+  short_description: "Scaffold, bootstrap, create, or start a new Tauri 2 desktop application with a dwind/dominato..."
+  default_prompt: "Use $scaffold-desktop for this task."

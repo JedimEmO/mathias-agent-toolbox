@@ -1,0 +1,4 @@
+interface:
+  display_name: "Scaffold Fullstack"
+  short_description: "Scaffold, bootstrap, create, or start a new full-stack Rust project from scratch — including..."
+  default_prompt: "Use $scaffold-fullstack for this task."

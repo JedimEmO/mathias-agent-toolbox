@@ -83,7 +83,7 @@ Structure your output as:
 2. **Crate/module structure** — directory tree showing where new code lives
 3. **Trait boundaries** — key port traits with method signatures, showing the domain/infra boundary
 4. **Error strategy** — which error types, thiserror in libraries vs anyhow in binaries
-5. **API surface** — if applicable, the RAS macro invocations or endpoint definitions
+5. **API surface** — if applicable, the Rust API Stack macro invocations or endpoint definitions
 6. **Testing strategy** — which fakes are needed, small/medium/large test distribution
 7. **Open questions** — trade-offs, things that need user input, things you'd want to validate
 

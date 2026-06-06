@@ -1,0 +1,4 @@
+interface:
+  display_name: "Bevy Debug Inspection"
+  short_description: "Debug, inspect, test, verify, or diagnose runtime behavior in a Bevy game, including blank sc..."
+  default_prompt: "Use $bevy-debug-inspection for this task."

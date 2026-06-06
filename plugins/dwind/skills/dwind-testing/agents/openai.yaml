@@ -1,0 +1,4 @@
+interface:
+  display_name: "dwind Testing"
+  short_description: "Testing dwind/dominator WASM components, writing wasm-bindgen-test tests, DOM isolation betwe..."
+  default_prompt: "Use $dwind-testing for this task."

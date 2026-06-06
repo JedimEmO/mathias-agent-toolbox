@@ -1,7 +1,6 @@
 ---
 name: agent-observability
 description: Use when the user asks about tracing agent decisions, debugging multi-agent flows, monitoring tool usage, error handling in agent systems, resilience patterns for agents, circuit breakers, retry strategies, cost tracking, or human-in-the-loop observability.
-version: 1.0.0
 ---
 
 # Agent Observability — Tracing, Resilience, and Cost
@@ -121,7 +120,7 @@ For tool failures (network errors, rate limits, transient issues). Standard patt
 If a specialist fails, route to a more capable (but more expensive) agent. Or to a generalist that can attempt the task with less precision.
 
 - Code review agent fails → fall back to general-purpose agent with code review instructions
-- Specialist with Haiku fails → retry with Sonnet
+- Lightweight specialist fails -> retry with a more capable model
 - The key design constraint: the fallback agent must be able to pick up from where the failed agent left off. This means the failed agent's partial work must be accessible — store intermediate results, not just final output.
 
 ### Graceful Degradation
@@ -233,7 +232,7 @@ Token spend is the cloud bill of agent systems. Track it or be surprised by it.
 
 **Cost optimization signals:**
 
-- A specialist using Opus for a task that Haiku could handle — right-size the model
+- A specialist using a deep-reasoning model for a task a lightweight model could handle — right-size the model
 - Tool outputs that are mostly discarded (the agent only reads 10% of what the tool returns) — add filtering to the tool
 - Coordinator spending more tokens than specialists — the routing is more expensive than the work, simplify the coordinator
 - Retry loops consuming budget without making progress — fix the root cause instead of retrying

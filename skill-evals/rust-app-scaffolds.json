@@ -1,0 +1,20 @@
+{
+  "plugin": "rust-app-scaffolds",
+  "scenarios": [
+    {
+      "query": "Scaffold a full-stack Rust web app with a Rust API Stack backend and dwind frontend.",
+      "expected_skills": ["scaffold-fullstack"],
+      "expected_behavior": ["Copies and renames the template", "Preserves workspace boundaries", "Explains required customization points"]
+    },
+    {
+      "query": "Start a Tauri 2 desktop app with a dwind frontend and testable Rust core.",
+      "expected_skills": ["scaffold-desktop"],
+      "expected_behavior": ["Uses the desktop template", "Keeps core logic separate from adapters", "Includes development and build commands"]
+    },
+    {
+      "query": "Replace the Item domain in the scaffold with my own Project domain.",
+      "expected_skills": ["scaffold-fullstack", "scaffold-desktop"],
+      "expected_behavior": ["Uses customization guidance", "Renames app-prefixed crates coherently", "Updates tests and fakes"]
+    }
+  ]
+}

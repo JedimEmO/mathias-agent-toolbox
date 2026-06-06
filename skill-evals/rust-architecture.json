@@ -1,0 +1,20 @@
+{
+  "plugin": "rust-architecture",
+  "scenarios": [
+    {
+      "query": "Restructure this Rust app around trait boundaries and dependency injection.",
+      "expected_skills": ["rust-architecture"],
+      "expected_behavior": ["Defines ports in core/domain code", "Implements adapters at edges", "Keeps IO out of domain logic"]
+    },
+    {
+      "query": "Create a Cargo workspace layout and feature strategy for a new Rust service.",
+      "expected_skills": ["rust-project-setup"],
+      "expected_behavior": ["Starts simple", "Uses workspace dependencies", "Avoids speculative crate splitting"]
+    },
+    {
+      "query": "Add fakes and integration tests for a Rust service with HTTP endpoints.",
+      "expected_skills": ["rust-testing"],
+      "expected_behavior": ["Uses hand-written fakes", "Prefers in-process tests", "Avoids mocking frameworks by default"]
+    }
+  ]
+}

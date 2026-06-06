@@ -1,0 +1,4 @@
+interface:
+  display_name: "Tool Design"
+  short_description: "Designing tools for agents, tool granularity, tool schemas, input/output contracts, error con..."
+  default_prompt: "Use $tool-design for this task."
