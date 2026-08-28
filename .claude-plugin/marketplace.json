@@ -62,6 +62,12 @@
       "source": "ui-engineering",
       "description": "Skills for analyzing, evaluating, documenting, testing, and improving user interfaces, interaction behavior, product flows, reactive code quality, evergreen UI documentation, and UX implementation details",
       "version": "1.0.0"
+    },
+    {
+      "name": "mathias-voice",
+      "source": "mathias-voice",
+      "description": "Mathias's teaching voice as a Claude Code output style plus a drafting skill, derived from the Dominator course, dwind series, and Rust Corner video manuscripts",
+      "version": "1.0.0"
     }
   ]
 }

@@ -1,0 +1,4 @@
+interface:
+  display_name: "Write In My Voice"
+  short_description: "Draft or rewrite prose in Mathias's teaching voice."
+  default_prompt: "Use $write-in-my-voice to draft this in my tone of voice."

@@ -35,6 +35,8 @@ plugins/PLUGIN_NAME/
 
 The `skills/`, `references/`, templates, scripts, and other content files are the source of truth for both Claude Code and Codex.
 
+A plugin may also ship an `output-styles/` directory of Claude Code output styles. Codex has no equivalent, so a plugin shipping an output style should expose the same guidance as a skill under `skills/`, and the Codex manifest points at that skill tree as usual.
+
 ## Dual Marketplace Metadata
 
 When adding, renaming, moving, or changing plugin install-facing metadata, update both platform surfaces:

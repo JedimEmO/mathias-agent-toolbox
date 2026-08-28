@@ -123,6 +123,11 @@ if (fs.existsSync(PLUGINS_DIR)) {
       output.push(`- [${extractTitle(agentMd)}](${pluginName}/${relativeLink(pluginName, agentMd)})`);
     }
 
+    const outputStylesDir = path.join(pluginDir, "output-styles");
+    for (const styleMd of findMarkdownFiles(outputStylesDir)) {
+      output.push(`- [${extractTitle(styleMd)}](${pluginName}/${relativeLink(pluginName, styleMd)})`);
+    }
+
     output.push("");
   }
 }

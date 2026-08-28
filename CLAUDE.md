@@ -32,6 +32,8 @@ plugins/PLUGIN_NAME/
 
 The `skills/`, `references/`, templates, scripts, and other content files are shared source of truth. Do not duplicate skill content for Codex.
 
+A plugin may also ship an `output-styles/` directory of Claude Code output styles (Markdown with `name`, `description`, and optional `keep-coding-instructions` frontmatter). Codex has no output styles, so any plugin shipping one should also expose the same guidance as a skill.
+
 ## Dual Marketplace Metadata
 
 When adding, renaming, moving, or changing plugin install-facing metadata, update both platform surfaces:

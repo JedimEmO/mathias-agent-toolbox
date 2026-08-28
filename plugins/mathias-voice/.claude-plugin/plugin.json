@@ -1,0 +1,22 @@
+{
+  "name": "mathias-voice",
+  "version": "1.0.0",
+  "description": "Mathias's teaching voice as a Claude Code output style plus a drafting skill, derived from the Dominator course, dwind series, and Rust Corner video manuscripts",
+  "author": {
+    "name": "JedimEmO"
+  },
+  "keywords": [
+    "voice",
+    "tone-of-voice",
+    "output-style",
+    "writing",
+    "technical-writing",
+    "video-script",
+    "manuscript",
+    "tutorial",
+    "documentation",
+    "editing",
+    "style-guide",
+    "rust-corner"
+  ]
+}

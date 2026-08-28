@@ -40,7 +40,7 @@ plugins/my-plugin/
 │   └── plugin.json
 ├── .codex-plugin/
 │   └── plugin.json
-└── skills/            # and/or commands/, agents/, hooks/, .mcp.json
+└── skills/            # and/or commands/, agents/, hooks/, output-styles/, .mcp.json
     └── my-skill/
         └── SKILL.md
 ```
