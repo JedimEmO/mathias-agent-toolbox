@@ -1,4 +1,0 @@
-interface:
-  display_name: "Enforce Robustness"
-  short_description: "Raise testing standards for AI-coded changes."
-  default_prompt: "Enforce robust tests for this change."

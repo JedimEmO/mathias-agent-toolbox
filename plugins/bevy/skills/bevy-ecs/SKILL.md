@@ -1,6 +1,6 @@
 ---
 name: bevy-ecs
-description: Use when the user asks about Bevy's Entity Component System, defining components, writing systems, queries, commands, resources, events, observers, system ordering, system sets, run conditions, or the ECS paradigm in Bevy. Also triggers when the user is confused about the ECS mental model or asks how to structure game logic.
+description: Use when designing Bevy ECS components, systems, queries, resources, events, observers, schedules, or game-logic structure.
 ---
 
 # Bevy ECS — Entity Component System Fundamentals
@@ -56,7 +56,7 @@ struct Poisoned;
 struct Grounded;
 ```
 
-### Required Components (Bevy 0.15+)
+### Required Components (Bevy 0.19)
 
 Use `#[require(...)]` to auto-insert dependencies when a component is added (uses `Default` unless overridden at spawn):
 
@@ -102,7 +102,7 @@ fn main() {
 
 ### System Parameter Types
 
-Key types: `Query`, `Res`/`ResMut`, `Commands`, `EventReader`/`EventWriter`, `Local`, `Single`, `ParamSet`, `Option<Res<T>>`.
+Key types: `Query`, `Res`/`ResMut`, `Commands`, `MessageReader`/`MessageWriter`, `Local`, `Single`, `ParamSet`, `Option<Res<T>>`.
 
 > See the **system-params-cheatsheet** reference for the complete table with examples and notes.
 
@@ -174,7 +174,7 @@ fn system(query: Query<(&Transform, Option<&Velocity>)>) {
 
 ### Single-Entity Queries
 
-When you expect exactly one matching entity, use `Single<>` (Bevy 0.15+):
+When you expect exactly one matching entity, use `Single<>` (Bevy 0.19):
 
 ```rust
 fn camera_follow(
@@ -332,41 +332,43 @@ fn system(score: Option<Res<Score>>) {
 }
 ```
 
-## Events and Observers
+## Messages and Observers
 
-### Events
+### Buffered messages
 
-Events are the primary way to communicate between systems without tight coupling.
+Use buffered messages to communicate between scheduled systems without tight coupling.
+In Bevy 0.17+, `Message` replaces the older buffered-event API. Observer events are a
+separate mechanism and use `Event` plus `On<T>`.
 
 ```rust
-#[derive(Event)]
-struct DamageEvent {
+#[derive(Message)]
+struct DamageMessage {
     entity: Entity,
     amount: i32,
 }
 
-#[derive(Event)]
-struct GameOverEvent;
+#[derive(Message)]
+struct GameOverMessage;
 ```
 
-Register events and use `EventWriter` / `EventReader`:
+Register messages and use `MessageWriter` / `MessageReader`:
 
 ```rust
 fn main() {
     App::new()
         .add_plugins(DefaultPlugins)
-        .add_event::<DamageEvent>()
-        .add_event::<GameOverEvent>()
+        .add_message::<DamageMessage>()
+        .add_message::<GameOverMessage>()
         .add_systems(Update, (deal_damage, apply_damage).chain())
         .run();
 }
 
 fn deal_damage(
-    mut writer: EventWriter<DamageEvent>,
+    mut writer: MessageWriter<DamageMessage>,
     query: Query<(Entity, &ContactInfo), With<Hazard>>,
 ) {
     for (entity, contact) in &query {
-        writer.send(DamageEvent {
+        writer.write(DamageMessage {
             entity: contact.other_entity,
             amount: 10,
         });
@@ -374,26 +376,30 @@ fn deal_damage(
 }
 
 fn apply_damage(
-    mut reader: EventReader<DamageEvent>,
+    mut reader: MessageReader<DamageMessage>,
     mut query: Query<&mut Health>,
 ) {
-    for event in reader.read() {
-        if let Ok(mut health) = query.get_mut(event.entity) {
-            health.0 -= event.amount;
+    for message in reader.read() {
+        if let Ok(mut health) = query.get_mut(message.entity) {
+            health.0 -= message.amount;
         }
     }
 }
 ```
 
-Events last for **two frames** by default, then are dropped. Always read events every frame to avoid missing them.
+Messages are retained across two message-buffer updates. A reader that runs at least once
+per update will not miss messages; readers that run less often can miss older messages.
 
-### Observers (Bevy 0.15+)
+### Observer events (Bevy 0.19)
 
-Observers are reactive — they run immediately when a specific event is triggered, without waiting for the schedule. They are ideal for structural changes.
+Observer events are reactive. They run when triggered, rather than being polled through a
+message buffer. Use them for targeted reactions and lifecycle-style behavior.
 
 ```rust
-#[derive(Event)]
-struct OnDeath;
+#[derive(EntityEvent)]
+struct OnDeath {
+    entity: Entity,
+}
 
 fn setup(mut commands: Commands) {
     commands.spawn((
@@ -402,11 +408,9 @@ fn setup(mut commands: Commands) {
     )).observe(on_death);
 }
 
-fn on_death(trigger: Trigger<OnDeath>, mut commands: Commands) {
-    // `trigger.target()` is the entity that the event was triggered on
-    let entity = trigger.target();
-    commands.entity(entity).despawn();
-    info!("Entity {:?} died", entity);
+fn on_death(trigger: On<OnDeath>, mut commands: Commands) {
+    commands.entity(trigger.entity).despawn();
+    info!("Entity {:?} died", trigger.entity);
 }
 ```
 
@@ -419,7 +423,7 @@ fn check_health(
 ) {
     for (entity, health) in &query {
         if health.0 <= 0 {
-            commands.trigger_targets(OnDeath, entity);
+            commands.trigger(OnDeath { entity });
         }
     }
 }
@@ -435,7 +439,7 @@ fn main() {
         .run();
 }
 
-fn on_any_death(trigger: Trigger<OnDeath>, mut score: ResMut<Score>) {
+fn on_any_death(_trigger: On<OnDeath>, mut score: ResMut<Score>) {
     score.0 += 100;
 }
 ```

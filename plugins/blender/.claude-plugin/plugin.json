@@ -1,0 +1,17 @@
+{
+  "name": "blender",
+  "version": "1.0.0",
+  "description": "Connect Claude Code and Codex to Blender through the community blender-mcp server",
+  "author": {
+    "name": "JedimEmO"
+  },
+  "homepage": "https://github.com/ahujasid/blender-mcp",
+  "repository": "https://github.com/ahujasid/blender-mcp",
+  "keywords": [
+    "blender",
+    "3d",
+    "mcp",
+    "modeling",
+    "scene-generation"
+  ]
+}

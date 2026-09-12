@@ -3,7 +3,7 @@
   "scenarios": [
     {
       "query": "Review whether this app's UI/UX is satisfactory and backed by meaningful tests.",
-      "expected_skills": ["analyze-ui"],
+      "expected_skills": ["document-ui-flows", "enforce-testable-ui-flows"],
       "expected_behavior": ["Observes core flows", "Checks responsive/accessibility basics", "Evaluates test evidence"]
     },
     {

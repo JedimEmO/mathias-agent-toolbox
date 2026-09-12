@@ -6,5 +6,4 @@ This plugin treats tests, verification, and security checks as evidence that sho
 
 ## Skills
 
-- **enforce-robustness** — Raise unit, integration, UAT, regression, coverage, mutation, and contract-test evidence around a change.
 - **security-audit** — Analyze code for security risks and add committed tests, fuzz targets, sanitizer checks, and tool-backed audit coverage where appropriate.

@@ -34,7 +34,7 @@
 - Audio (Third-Party)
   - bevy_kira_audio
 
-Detailed reference for recommended third-party Bevy crates. All versions listed target **Bevy 0.15.x**. Always verify compatibility before adding a dependency.
+Detailed reference for recommended third-party Bevy crates. Bevy 0.19 compatibility is the target for this reference, but third-party releases move independently. Treat every version below as a starting point and verify the crate's current compatibility table before adding it.
 
 ---
 
@@ -46,16 +46,16 @@ ECS-native physics engine designed specifically for Bevy. Successor to bevy_xpbd
 
 ```toml
 # Cargo.toml
-avian3d = "0.2"
+avian3d = "0.7"
 # or for 2D:
-avian2d = "0.2"
+avian2d = "0.7"
 ```
 
 ```rust
 app.add_plugins(avian3d::PhysicsPlugins::default());
 ```
 
-- Repo: https://github.com/Jondolf/avian
+- Repo: https://github.com/avianphysics/avian
 - Docs: https://docs.rs/avian3d
 
 ### bevy_rapier3d / bevy_rapier2d
@@ -63,9 +63,9 @@ app.add_plugins(avian3d::PhysicsPlugins::default());
 Rapier physics engine integration. Mature and battle-tested.
 
 ```toml
-bevy_rapier3d = "0.28"
+bevy_rapier3d = "0.36"
 # or for 2D:
-bevy_rapier2d = "0.28"
+bevy_rapier2d = "0.36"
 ```
 
 ```rust
@@ -84,7 +84,7 @@ app.add_plugins(RapierPhysicsPlugin::<NoUserData>::default());
 Declarative input mapping: bind actions to keys, buttons, gamepads, mouse, or virtual axes. Supports combos, chords, and input contexts.
 
 ```toml
-leafwing-input-manager = "0.16"
+leafwing-input-manager = "0.21"
 ```
 
 ```rust
@@ -103,7 +103,7 @@ app.add_plugins(InputManagerPlugin::<MyAction>::default());
 Declarative asset loading — define asset collections with derive macros, load them during a loading state, get notified when complete.
 
 ```toml
-bevy_asset_loader = "0.22"
+bevy_asset_loader = "0.27"
 ```
 
 ```rust
@@ -137,7 +137,7 @@ app.add_plugins(ProgressPlugin::<GameState>::new().with_state(GameState::Loading
 Component and resource tweens — animate transforms, colors, and custom lenses over time with easing functions and sequences.
 
 ```toml
-bevy_tweening = "0.12"
+bevy_tweening = "0.16"
 ```
 
 ```rust
@@ -156,7 +156,7 @@ app.add_plugins(TweeningPlugin);
 Immediate-mode egui rendered inside Bevy. Ideal for debug panels, level editors, and dev tools. Not recommended for in-game UI.
 
 ```toml
-bevy_egui = "0.34"
+bevy_egui = "0.42"
 ```
 
 ```rust
@@ -171,7 +171,7 @@ app.add_plugins(EguiPlugin);
 Rich text editing widget using cosmic-text. Supports multi-line editing, selection, clipboard, and custom fonts.
 
 ```toml
-bevy_cosmic_edit = "0.27"
+bevy_cosmic_edit = "0.26"
 ```
 
 ```rust
@@ -207,7 +207,7 @@ app.add_plugins(lightyear::prelude::client::ClientPlugins::default());
 High-level replication: automatic entity spawning on clients, component synchronization, and server RPCs. Transport-agnostic.
 
 ```toml
-bevy_replicon = "0.30"
+bevy_replicon = "0.44"
 ```
 
 ```rust
@@ -243,7 +243,7 @@ app.add_plugins(RenetClientPlugin);
 Runtime ECS inspector. Browse all entities, view and edit component values live, inspect resources. Essential during development.
 
 ```toml
-bevy-inspector-egui = "0.28"
+bevy-inspector-egui = "0.37"
 ```
 
 ```rust
@@ -253,15 +253,16 @@ app.add_plugins(bevy_inspector_egui::quick::WorldInspectorPlugin::default());
 - Repo: https://github.com/jakobhellermann/bevy-inspector-egui
 - Docs: https://docs.rs/bevy-inspector-egui
 
-### bevy_screen_diagnostics
+### bevy_screen_diagnostics (Bevy 0.16 only)
 
-On-screen text overlay showing FPS, entity count, and custom diagnostics. Lightweight, no egui dependency.
+On-screen text overlay showing FPS, entity count, and custom diagnostics. Lightweight, no egui dependency. The current published line documented by docs.rs targets Bevy 0.16, so verify a Bevy 0.19-compatible fork or use Bevy's built-in diagnostics instead.
 
 ```toml
-bevy_screen_diagnostics = "0.7"
+bevy_screen_diagnostics = "0.8.1"
 ```
 
 ```rust
+// Use this only in a Bevy 0.16 project; it is not compatible with Bevy 0.19.
 app.add_plugins(ScreenDiagnosticsPlugin::default())
    .add_plugins(ScreenFrameDiagnosticsPlugin);
 ```
@@ -278,7 +279,7 @@ app.add_plugins(ScreenDiagnosticsPlugin::default())
 High-performance tilemap rendering backed by the ECS. Supports multiple layers, animated tiles, and large maps.
 
 ```toml
-bevy_ecs_tilemap = "0.15"
+bevy_ecs_tilemap = "0.19"
 ```
 
 ```rust
@@ -297,7 +298,7 @@ app.add_plugins(TilemapPlugin);
 GPU-accelerated particle system. Define effects with spawners, modifiers, and render properties. Handles millions of particles.
 
 ```toml
-bevy_hanabi = "0.14"
+bevy_hanabi = "0.19"
 ```
 
 ```rust
@@ -383,7 +384,7 @@ fn load_settings(pkv: Res<PkvStore>) {
 Advanced audio playback powered by the Kira audio library. Supports spatial audio, audio tweening, multiple channels, and precise timing.
 
 ```toml
-bevy_kira_audio = "0.21"
+bevy_kira_audio = "0.26"
 ```
 
 ```rust

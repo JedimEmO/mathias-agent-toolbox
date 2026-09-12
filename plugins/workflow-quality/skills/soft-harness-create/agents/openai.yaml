@@ -1,4 +1,0 @@
-interface:
-  display_name: "Soft Harness Create"
-  short_description: "Create a soft harness, set up qualitative tests, measure code quality, track non-functional m..."
-  default_prompt: "Use $soft-harness-create for this task."

@@ -1,6 +1,6 @@
 ---
 name: rust-architecture
-description: Use when the user asks about dependency injection in Rust, trait-as-interface patterns, module boundaries, hexagonal architecture, ports and adapters, error handling strategy, when to use generics vs dyn Trait, how to structure application layers, or how to wire dependencies together.
+description: Use when structuring Rust application layers, trait boundaries, dependency injection, ports and adapters, or error handling.
 ---
 
 # Rust Architecture — DI, Trait Boundaries & Error Handling

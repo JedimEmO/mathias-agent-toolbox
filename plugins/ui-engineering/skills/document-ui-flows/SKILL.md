@@ -1,6 +1,6 @@
 ---
 name: document-ui-flows
-description: Use when the user asks to analyze, map, inventory, or document an application's UI behavior, features, screens, navigation, user journeys, workflows, interaction states, or product capabilities. Produces a readable diagram plus text describing each flow, the user story it enables, actors, triggers, happy path, alternate paths, UI states, permissions, data touched, documentation anchors, stable flow IDs, and open questions.
+description: Use when mapping an application's screens, navigation, user journeys, interaction states, or product flows into documentation.
 ---
 
 # Document UI Flows

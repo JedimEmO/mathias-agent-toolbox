@@ -1,6 +1,6 @@
 ---
 name: security-audit
-description: Use when the user asks for a security review, vulnerability audit, threat modeling, secure-code analysis, dependency audit, fuzzing, sanitizer checks, API verification, SAST/DAST guidance, security tests, exploit regression tests, auth/authz validation, input sanitization checks, secret scanning, or aggressive trust building for security-sensitive code.
+description: Use when reviewing code for vulnerabilities, threat-model issues, auth failures, unsafe inputs, dependency risks, secrets, or security regressions.
 ---
 
 # Security Audit

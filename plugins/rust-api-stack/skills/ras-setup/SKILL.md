@@ -1,6 +1,6 @@
 ---
 name: ras-setup
-description: Use when the user asks to create a new RAS project, set up a Rust API Stack workspace, configure Cargo.toml for RAS crates, add RAS dependencies, scaffold a service crate, or asks about RAS workspace structure and crate organization.
+description: Use when creating or configuring a Rust API Stack workspace, service crate, or RAS Cargo dependencies.
 ---
 
 # RAS Project Setup - Rust API Stack Workspace Scaffolding

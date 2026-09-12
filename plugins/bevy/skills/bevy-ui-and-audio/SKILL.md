@@ -354,10 +354,10 @@ For games that need crossfading, audio channels, streaming, or fine-grained audi
 ```toml
 # Cargo.toml — replace default bevy audio
 [dependencies]
-bevy = { version = "0.15", default-features = false, features = [
+bevy = { version = "0.19", default-features = false, features = [
     # include your needed features, but NOT bevy_audio
 ] }
-bevy_kira_audio = "0.22"  # Match your Bevy version
+bevy_kira_audio = "0.26"  # Verify the crate's Bevy compatibility table
 ```
 
 ```rust

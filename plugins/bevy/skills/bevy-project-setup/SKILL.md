@@ -1,6 +1,6 @@
 ---
 name: bevy-project-setup
-description: Use when the user asks to create a new Bevy project, scaffold a game, configure Cargo.toml for Bevy, set up fast compile times, configure dynamic linking, add Bevy feature flags, or asks about Bevy project structure and build optimization.
+description: Use when creating or configuring a Bevy project, including Cargo features, workspace structure, dynamic linking, and compile-time optimization.
 ---
 
 # Bevy Project Setup — Scaffolding & Build Optimization
@@ -49,7 +49,7 @@ resolver = "2"
 members = ["game"]
 
 [workspace.dependencies]
-bevy = { version = "0.15", default-features = false, features = [
+bevy = { version = "0.19", default-features = false, features = [
     "bevy_asset",
     "bevy_audio",
     "bevy_color",

@@ -120,8 +120,8 @@ impl<T: ToggleValue + ?Sized> ToggleValue for Box<T> {
 Consumer crates must import macros explicitly:
 
 ```rust
-#[macro_use]
-extern crate dwind_macros;       // for dwclass!
+use dwind_macros::dwclass;
+use dwind::prelude::*;              // utility constants used by dwclass!
 #[macro_use]
 extern crate my_design_system;   // for component macros (my_card!, etc.)
 ```
@@ -150,7 +150,7 @@ my_card!({
 **Components**: Button, Modal, TextInput, Select, Slider, Card, Heading, List
 
 To see the full implementation of any component, read its source file:
-`/home/mmy/repos/oss/dominator-css-bindgen/crates/dwui/src/components/`
+the current `dwui` crate source and documentation
 
 ## Mixins Pattern
 

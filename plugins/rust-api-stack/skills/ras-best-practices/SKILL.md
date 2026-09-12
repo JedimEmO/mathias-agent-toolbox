@@ -1,6 +1,6 @@
 ---
 name: ras-best-practices
-description: Use when the user asks about Rust API Stack/RAS observability, error handling in RAS services, usage tracking, method duration tracking, Prometheus metrics, OpenTelemetry integration, using the generated Rust client, service-to-service communication, permission manifests, testing RAS services, or general best practices for production RAS deployments.
+description: Use when hardening Rust API Stack services with errors, observability, generated clients, permissions, service communication, or integration tests.
 ---
 
 # RAS Best Practices - Observability, Errors, Clients & Testing

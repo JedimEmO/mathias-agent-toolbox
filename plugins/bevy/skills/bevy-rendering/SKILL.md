@@ -7,7 +7,7 @@ description: Use when the user asks about 2D or 3D rendering in Bevy, sprites, m
 
 This skill covers Bevy's rendering systems for both 2D and 3D. For component and system fundamentals, see the `bevy-ecs` skill.
 
-All examples target **Bevy 0.15+** APIs, which use individual components rather than the deprecated bundle pattern.
+All examples target **Bevy 0.19** APIs, which use individual components rather than the deprecated bundle pattern.
 
 ---
 
@@ -31,7 +31,8 @@ fn setup(mut commands: Commands) {
     commands.spawn((
         Transform::from_xyz(1.0, 0.0, 0.0), // world position: (1.0, 2.0, 0.0)
         Visibility::default(),
-    )).set_parent(parent);
+        ChildOf(parent),
+    ));
 }
 ```
 

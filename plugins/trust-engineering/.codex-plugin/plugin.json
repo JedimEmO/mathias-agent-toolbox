@@ -30,7 +30,6 @@
     ],
     "websiteURL": "https://jedimemo.github.io/mathias-agent-toolbox/",
     "defaultPrompt": [
-      "Enforce robustness for this change.",
       "Audit this code for security risks."
     ],
     "brandColor": "#0F766E"

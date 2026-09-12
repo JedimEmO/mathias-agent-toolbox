@@ -27,11 +27,11 @@ See `references/physics-comparison.md` for a full side-by-side API comparison.
 ```toml
 # For 3D physics:
 [dependencies]
-avian3d = "0.2"
+avian3d = "0.7"
 
 # For 2D physics:
 [dependencies]
-avian2d = "0.2"
+avian2d = "0.7"
 ```
 
 ### Plugin Registration
@@ -102,11 +102,11 @@ fn spawn_kinematic_platform(mut commands: Commands) {
 ```toml
 # For 3D physics:
 [dependencies]
-bevy_rapier3d = "0.28"
+bevy_rapier3d = "0.36"
 
 # For 2D physics:
 [dependencies]
-bevy_rapier2d = "0.28"
+bevy_rapier2d = "0.36"
 ```
 
 ### Plugin Registration
@@ -202,13 +202,15 @@ Collider::compound(vec![                  // multiple shapes combined
 use avian3d::prelude::*;
 
 fn handle_collisions(
-    mut collision_started: EventReader<CollisionStarted>,
-    mut collision_ended: EventReader<CollisionEnded>,
+    mut collision_started: MessageReader<CollisionStart>,
+    mut collision_ended: MessageReader<CollisionEnd>,
 ) {
-    for CollisionStarted(entity_a, entity_b) in collision_started.read() {
+    for event in collision_started.read() {
+        let (entity_a, entity_b) = (event.collider1, event.collider2);
         println!("{entity_a:?} started colliding with {entity_b:?}");
     }
-    for CollisionEnded(entity_a, entity_b) in collision_ended.read() {
+    for event in collision_ended.read() {
+        let (entity_a, entity_b) = (event.collider1, event.collider2);
         println!("{entity_a:?} stopped colliding with {entity_b:?}");
     }
 }
@@ -216,7 +218,7 @@ fn handle_collisions(
 // ---- bevy_rapier ----
 use bevy_rapier3d::prelude::*;
 
-fn handle_collisions(mut collision_events: EventReader<CollisionEvent>) {
+fn handle_collisions(mut collision_events: MessageReader<CollisionEvent>) {
     for event in collision_events.read() {
         match event {
             CollisionEvent::Started(a, b, _flags) => {

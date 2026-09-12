@@ -23,15 +23,15 @@ version = "0.1.0"
 edition = "2021"
 
 [dependencies]
-dwind = { git = "https://github.com/nicksenger/dominator-css-bindgen", features = ["default_colors"] }
-dwind-macros = { git = "https://github.com/nicksenger/dominator-css-bindgen" }
+dwind = "0.8"
+dwind-macros = "0.5"
 dominator = "0.5"
 futures-signals = "0.3"
 web-sys = { version = "0.3", features = ["HtmlElement", "CssStyleDeclaration", "Document", "Window", "Element"] }
 wasm-bindgen = "0.2"
 
 [build-dependencies]
-dominator-css-bindgen = { git = "https://github.com/nicksenger/dominator-css-bindgen" }
+dominator-css-bindgen = "0.2"
 ```
 
 ## tokens.css
@@ -309,8 +309,8 @@ fn main() {
 ## lib.rs
 
 ```rust
-#[macro_use]
-extern crate dwind_macros;
+use dwind_macros::dwclass;
+use dwind::prelude::*;
 
 pub mod theme;
 pub mod mixins;

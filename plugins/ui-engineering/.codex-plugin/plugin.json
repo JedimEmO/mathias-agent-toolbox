@@ -39,7 +39,6 @@
     ],
     "websiteURL": "https://jedimemo.github.io/mathias-agent-toolbox/",
     "defaultPrompt": [
-      "Evaluate whether this app is satisfactory from a UI/UX and testability perspective.",
       "Analyze this app's UI behavior and document the user flows.",
       "Make these UI flows testable without a backend.",
       "Improve this UI code so reactivity is precise and files have clear responsibilities.",

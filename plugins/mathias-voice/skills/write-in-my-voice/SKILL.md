@@ -1,80 +1,102 @@
 ---
 name: write-in-my-voice
-description: Use when writing, drafting, rewriting, editing, or reviewing any prose that a human will read - video scripts, video manuscripts, tutorial chapters, course lessons, blog posts, READMEs, documentation pages, release notes, changelogs, announcements, talk abstracts, or narration. Also use for "make this sound like me", "in my tone of voice", "rustcorner script", "rewrite this in my style", or when checking whether a draft matches the voice. Load it before drafting rather than after, so the piece is written in the voice instead of translated into it. Provides the measured voice specification, a full annotated example script, and a rewrite and self-check workflow.
+description: Use when the user asks to write, rewrite, edit, or review prose in Mathias's voice, including technical writing, lessons, scripts, or release notes.
 ---
 
 # Write in my voice
 
-Draft or rewrite prose in Mathias's teaching voice: the register of the Dominator course,
-the dwind series and Mathias's Rust Corner.
+These are the language rules for Mathias's prose.
+They apply to any text, from a commit message to a course chapter.
 
-Read `references/voice-guide.md` before writing anything longer than a paragraph. It carries
-the measured specification - sentence lengths, pronoun ratios, exclamation rate, the
-signature moves and the verbatim ritual openings and sign-offs.
+The observations below come from long-form teaching prose.
+Use them as guardrails, not quotas; a release note or a chat reply may need a different shape.
 
-`references/example-script.md` is a complete piece in the voice with every move annotated.
-Read it when you need to see the rules working together rather than listed separately, and
-use it as the shape to follow for any long-form piece.
+The reader is a competent peer who needs the *why*, not a beginner who needs the basics restated.
 
-If a Claude Code session is already running the **Rust Corner** output style, the register
-is loaded and you only need the guide for long-form structure, rituals, and the self-check.
+## Person
 
-## Workflow
+- `we` is the default subject for explanation. Writer and reader work it out together. `let's`, `us` and `our` count as `we`.
+- `you` owns the outcome, the decision and the machine: what the reader will be able to do, what they must choose, what is on their disk.
+- Instructions and steps are imperative, with no subject: "Add the crate", "Run the tests". Do not narrate them as `we add`. Reference prose about options and flags often has no subject either, and that is fine.
+- `I` is rare and only for intent: a roadmap, a recommendation, something the writer prepared.
+- Never `I think`, `I believe`, `in my opinion`, `I'd suggest`. State the recommendation and give the reason.
+- Let the balance between `we` and `you` follow the subject. Use more `you` when discussing the reader's own code or decisions.
 
-1. **Establish the piece and the reader.** Ask what it is (video script, chapter, README,
-   blog post, release notes) and who reads it, if that is not already clear. The voice
-   assumes a competent peer who knows Rust and needs the *why*, not a beginner who needs
-   the basics restated.
+## Sentences
 
-2. **Decide whether rituals apply.** A published long-form piece - a video script, a lesson,
-   a talk - opens with "Hello, and welcome to Mathias's rust corner!" plus a one-line topic
-   promise, and closes with "Thanks for watching, GOODBYE!". A README, a PR body, a code
-   comment or a chat reply gets the register only, never the furniture.
+- Keep one main idea per sentence. Prefer short sentences, usually under 30 words, but vary the length when clarity needs it.
+- Hang a reason or consequence off the main clause with a comma or a semicolon. Do not stack subordinate clauses.
+- The semicolon also introduces the sharpening restatement: "start with a small concrete example; the classic counter widget."
+- `But`, `And` and `So` may open a sentence for a beat change, a few times per piece at most.
+- Use questions sparingly. A rhetorical question should earn its place and receive an immediate answer.
 
-3. **Outline by the explanation arc, not by the API surface.** Problem, payoff, smallest
-   concrete example, walk the example, why the constraint exists, the default and its
-   reason, what is out of scope. Section 4 of the guide has the full order with examples.
+## Lines and paragraphs
 
-4. **Draft it.** `we` as the default subject, `you` for the reader's outcomes and decisions,
-   `I` only for intent. One idea per sentence, median 17 words. Two-line paragraphs. Break
-   lines at clause boundaries in any Markdown you write to a file.
+- In manuscripts and Markdown source, break lines at clause boundaries, roughly every 14 words. A sentence may span lines. The reason is that clauses become visible and diffs stay small; rendered output does not change.
+- Paragraphs are two or three lines, four when a beat needs the room, then a blank line.
+- In chat replies, keep the short-clause rhythm without the hard breaks.
+- Prose first. A list is for genuinely enumerable things, never for two sentences that could be a paragraph.
 
-5. **Place the objections.** Wherever the design looks surprising, magical or wrong, name
-   that reaction before explaining it away. This is the move that most distinguishes the
-   voice; a draft with none of it will read as generic.
+## Order
 
-6. **Run the self-check below**, and fix what fails before handing the draft over.
+- Problem before solution. Give the problem its own beat.
+- Smallest concrete example before the general explanation.
+- Explain important constraints and recommendations, preferably close to the point where they appear.
+- Say what is out of scope when the omission could mislead the reader.
 
-## Self-check
+## Moves
 
-Run these against the finished draft. Each one maps to a measured property of the corpus.
+- Name a genuine reader objection before explaining it away: "This may seem a bit magical, but ...". Do not invent an objection merely to perform the move.
+- `Luckily` introduces the thing that already solves the annoyance just described. It needs the annoyance first.
+- Show code, then point at the parts: `Notice how`, `Observe that`. The line before a block says what the block is; the prose after it says what matters in it.
+- Separate orthogonal concepts explicitly: "Test size and test type are orthogonal concepts."
+- Deflate jargon with a dry aside, never a snarky one: "a static cast, behind a 'trust me bro' guarantee."
+- Use each move at most once or twice per piece, and vary the wording. The move is naming the reader's reaction, not the phrase "this may seem X, but".
+- Name technical identifiers precisely, using backticks when the identifier itself matters. Keep ordinary concepts readable without decorative markup.
 
-- **Sentence length.** Median around 17 words, almost nothing past 30. Split anything longer.
-- **Pronouns.** `we` should outnumber `you` roughly 4:3, and `I` should be scarce and only
-  ever about authorial intent. Zero instances of `I think` or `in my opinion`.
-- **Exclamation marks.** About one sentence in five in long-form, and every one of them on a
-  payoff. If one sits on a neutral fact, it is a period.
-- **Objection named.** At least one "this may seem strange / magical / wrong, but..." per
-  substantial section.
-- **Reasons attached.** Every recommendation and every constraint has its *why* in the same
-  sentence or the next one.
-- **Scope marked.** Anything deliberately skipped is called out, not silently dropped.
-- **Banned register.** No `powerful`, `seamless`, `robust`, `leverage`, `elegant`,
-  `it's worth noting`, `that said`, `delve`, `moreover`, `in conclusion`, `Great question!`.
-  No em dashes used for rhythm.
-- **Identifiers.** Every crate, type, method, macro and attribute is exact and in backticks.
-- **Prose first.** If a bulleted list could have been two lines of prose, make it prose.
-- **Honesty.** Costs, difficulty and failures are stated plainly, never softened.
+## Words
 
-## Rewriting someone else's draft
+Prefer plain, concrete language. Words such as `luckily`, `for instance` and `typically` may fit
+when they express a real relationship; do not sprinkle them in as markers.
 
-Keep the technical content; replace the register. In order: strip the hype and the hedges,
-convert passive and third-person constructions to `we` and `you`, move the problem statement
-ahead of the solution, split the long sentences at their clause boundaries, add the missing
-`why` behind each constraint, and insert the objection the original ignored.
+Do not use:
 
-Section 11 of the guide shows a short before-and-after of exactly this, and
-`references/example-script.md` shows the finished shape at full length.
+- Hype: `powerful`, `seamless`, `robust`, `blazing fast`, `game changer`, `leverage`, `unlock`, `elegant`, `delightful`.
+- Hedging: `it's worth noting`, `it's important to note`, `that said`, `at the end of the day`, `arguably`.
+- Scaffolding: `in this article we will explore`, `delve`, `firstly`, `moreover`, `furthermore`, `in conclusion`.
+- Assistant tics: `Great question!`, `Certainly!`, `I hope this helps`, `Feel free to`.
 
-Report what you changed and why in one short paragraph, so the user can push back on
-specific moves rather than on the whole rewrite.
+Quoting one of these when reporting a rewrite is fine.
+
+## Punctuation
+
+- `!` is rare, and sits only on a payoff: something works, a constraint lifts, a promise lands. Never on a neutral fact. A lesson or script earns a handful at its biggest moments; a short reply gets at most one; documentation gets none. When in doubt, a period.
+- Emphasis is `*asterisks*` around one contrasted word. Bold is almost never used.
+- No em dashes as a rhythm device. Commas, semicolons and line breaks instead.
+- Headings are sentence case and short: a noun, a gerund or a plain clause. `## The problem`, `## Choosing a transport`, `## When a pushed branch is safe to rebase`. No numbering, no colons, no selling.
+
+## Honesty
+
+- Costs, difficulty and failures are stated plainly and immediately. Warmth is in the framing, never in softening the news.
+- No filler enthusiasm. An excited tone with nothing behind it is what an imitation sounds like.
+
+## Check before handing over
+
+Most sentences are short and carry one main idea.
+`I` is scarce, and `we` carries explanations when collaboration is the point.
+Every `!` sits on a payoff, and there are few of them.
+Genuine objections are addressed when they help the reader.
+Important constraints and recommendations have reasons.
+Avoid the listed tics, and use lists only for genuinely enumerable material.
+
+When rewriting someone else's text, keep the content and replace the register.
+Strip hype and hedges, convert to `we` and `you`, move the problem ahead of the solution,
+split long sentences at their clauses, and name the objection the original ignored.
+Where the source gives a constraint without its reason, mark it for the author rather than invent one.
+Report what changed in one short paragraph.
+
+## Published long-form
+
+A video script or a lesson adds fixed openings and sign-offs on top of these rules.
+They are in `references/rituals.md`, and `references/example-script.md` is a complete script with every move annotated.
+Nothing else gets that furniture.

@@ -16,8 +16,8 @@ pub struct CombatPlugin;
 impl Plugin for CombatPlugin {
     fn build(&self, app: &mut App) {
         app
-            .add_event::<DamageEvent>()
-            .add_event::<DeathEvent>()
+            .add_message::<DamageMessage>()
+            .add_message::<DeathMessage>()
             .init_resource::<CombatStats>()
             .add_systems(Update, (
                 deal_damage,

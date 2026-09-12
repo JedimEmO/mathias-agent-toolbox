@@ -8,7 +8,7 @@
 - ParamSet Usage
 - Trigger (Observer Systems)
 
-Complete reference of all system parameter types available in Bevy 0.15+.
+Complete reference of all system parameter types available in Bevy 0.19.
 
 ## System Parameters
 
@@ -25,14 +25,14 @@ Complete reference of all system parameter types available in Bevy 0.15+.
 | `Query<&T, Added<T>>` | Added filter | `Query<&Health, Added<Health>>` | Only entities that just received `Health` |
 | `Query<&T, (With<A>, Without<B>)>` | Combined filters | `Query<&Health, (With<Enemy>, Without<Shield>)>` | Tuple of filters = AND logic |
 | `Query<(&A, Option<&B>)>` | Optional component | `Query<(&Transform, Option<&Velocity>)>` | Matches all with `Transform`; `Velocity` may be `None` |
-| `Single<&T>` | Exactly one entity (0.15+) | `Single<&Transform, With<Player>>` | Panics if zero or multiple matches. Use for unique entities |
+| `Single<&T>` | Exactly one entity (0.19) | `Single<&Transform, With<Player>>` | Panics if zero or multiple matches. Use for unique entities |
 | `Res<T>` | Read-only resource | `Res<Time>` | Panics if resource does not exist |
 | `ResMut<T>` | Mutable resource | `ResMut<Score>` | Requires `mut score` binding |
 | `Option<Res<T>>` | Optional resource (read) | `Option<Res<Score>>` | Returns `None` if resource not inserted |
 | `Option<ResMut<T>>` | Optional resource (write) | `Option<ResMut<Score>>` | Returns `None` if resource not inserted |
 | `Commands` | Deferred world mutations | `Commands` | Spawn, despawn, insert/remove components. Applied between system sets |
-| `EventReader<T>` | Read events | `EventReader<DamageEvent>` | Tracks read position automatically. Events persist for 2 frames |
-| `EventWriter<T>` | Send events | `EventWriter<DamageEvent>` | Use `.send(event)` to emit |
+| `MessageReader<T>` | Read buffered messages | `MessageReader<DamageMessage>` | Tracks read position automatically. Messages persist across two buffer updates |
+| `MessageWriter<T>` | Write buffered messages | `MessageWriter<DamageMessage>` | Use `.write(message)` to emit |
 | `Local<T>` | Per-system local state | `Local<u32>` | Persists across system runs. Each system instance gets its own copy. `T: Default` required |
 | `ParamSet<(Q1, Q2)>` | Conflicting queries | `ParamSet<(Query<&mut A, With<B>>, Query<&mut A, Without<B>>)>` | Use when two queries would conflict. Access via `.p0()`, `.p1()` |
 | `NonSend<T>` | Non-Send resource (read) | `NonSend<WinitWindows>` | For resources that must stay on the main thread |
@@ -94,17 +94,23 @@ fn system(mut params: ParamSet<(
 }
 ```
 
-## Trigger (Observer Systems)
+## On (Observer Systems)
 
-Observer systems use `Trigger<T>` instead of regular system parameters:
+Observer systems use `On<T>` instead of regular system parameters:
 
 ```rust
+#[derive(EntityEvent)]
+struct DamageEvent {
+    entity: Entity,
+    amount: i32,
+}
+
 fn on_damage(
-    trigger: Trigger<DamageEvent>,
+    trigger: On<DamageEvent>,
     mut query: Query<&mut Health>,
 ) {
     let event = trigger.event();
-    let target = trigger.target();
+    let target = event.entity;
     if let Ok(mut health) = query.get_mut(target) {
         health.0 -= event.amount;
     }

@@ -35,19 +35,17 @@ commit message.
 
 ## Skill
 
-- **write-in-my-voice** - Draft or rewrite video scripts, tutorial chapters, blog posts,
-  READMEs, release notes and talk narration in the voice, then check the result against a
-  measurable self-check. Works with or without the output style active, and it is the entry
-  point for Codex, which has no output styles.
+- **write-in-my-voice** - The language rules of the voice, condensed to one file: person,
+  sentence and line shape, the order of an explanation, the signature moves, the word lists,
+  punctuation, and a check to run before handing over a draft. It applies to any prose, from
+  a commit message to a course chapter. Works with or without the output style active, and
+  it is the entry point for Codex, which has no output styles.
+
+`skills/write-in-my-voice/references/rituals.md` holds the openings and sign-offs that only
+published video scripts and lessons carry.
 
 `skills/write-in-my-voice/references/example-script.md` is a complete annotated script in
-the voice, with the self-check numbers it scored. It is the fastest way to see what the
-specification adds up to.
-
-`skills/write-in-my-voice/references/voice-guide.md` is the full specification: the
-measurement table, the person and stance rules, the seven-step explanation arc, the
-signature moves with verbatim examples, the word lists, the ritual openings and sign-offs,
-and a worked before-and-after rewrite.
+the voice, with the numbers it scored. It is the fastest way to see what the rules add up to.
 
 ## Which one to use
 

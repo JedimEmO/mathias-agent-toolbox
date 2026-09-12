@@ -54,7 +54,7 @@ struct FpsCamera {
 }
 
 fn fps_camera_look(
-    mut motion: EventReader<MouseMotion>,
+    mut motion: MessageReader<MouseMotion>,
     mut camera: Query<(&mut Transform, &mut FpsCamera)>,
 ) {
     let (mut transform, mut fps) = camera.single_mut();
@@ -92,8 +92,8 @@ struct OrbitCamera {
 }
 
 fn orbit_camera_system(
-    mut scroll: EventReader<MouseWheel>,
-    mut motion: EventReader<MouseMotion>,
+    mut scroll: MessageReader<MouseWheel>,
+    mut motion: MessageReader<MouseMotion>,
     buttons: Res<ButtonInput<MouseButton>>,
     mut camera: Query<(&mut Transform, &mut OrbitCamera)>,
 ) {
@@ -146,11 +146,11 @@ fn setup_draggable(mut commands: Commands) {
 }
 
 fn on_drag_start(
-    trigger: Trigger<Pointer<DragStart>>,
+    trigger: On<Pointer<DragStart>>,
     mut commands: Commands,
     transforms: Query<&Transform>,
 ) {
-    let entity = trigger.target();
+    let entity = trigger.entity;
     let pointer_pos = trigger.event().pointer_location.position;
     if let Ok(transform) = transforms.get(entity) {
         let offset = Vec2::new(transform.translation.x, transform.translation.y) - pointer_pos;
@@ -159,10 +159,10 @@ fn on_drag_start(
 }
 
 fn on_drag(
-    trigger: Trigger<Pointer<Drag>>,
+    trigger: On<Pointer<Drag>>,
     mut transforms: Query<(&mut Transform, &Dragging)>,
 ) {
-    let entity = trigger.target();
+    let entity = trigger.entity;
     let pointer_pos = trigger.event().pointer_location.position;
     if let Ok((mut transform, dragging)) = transforms.get_mut(entity) {
         let new_pos = pointer_pos + dragging.offset;
@@ -171,7 +171,7 @@ fn on_drag(
     }
 }
 
-fn on_drag_end(trigger: Trigger<Pointer<DragEnd>>, mut commands: Commands) {
-    commands.entity(trigger.target()).remove::<Dragging>();
+fn on_drag_end(trigger: On<Pointer<DragEnd>>, mut commands: Commands) {
+    commands.entity(trigger.entity).remove::<Dragging>();
 }
 ```

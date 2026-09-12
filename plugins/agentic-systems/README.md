@@ -9,4 +9,3 @@ Agentic systems architecture — agent decomposition, communication patterns, to
 - **agent-state** — State management, prompt architecture, context windows, memory, compression
 - **tool-design** — Tool granularity, schemas, contracts, composability, idempotency
 - **agent-observability** — Tracing, debugging, monitoring, resilience, cost tracking
-- **plan-agentic-system** — Interactive discovery process for designing new agent architectures

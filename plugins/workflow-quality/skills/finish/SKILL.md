@@ -1,11 +1,11 @@
 ---
 name: finish
-description: Use when the user says they are done, asks to finish a task, wants to verify their work is complete, wants a pre-commit quality check, or asks to validate that changes are ready to ship. Also triggered by phrases like "wrap up", "finalize", "make sure this is done", "are we good?", or "let's finish".
+description: Use when the user asks for a completion check, release-readiness review, or verification of the current change.
 ---
 
 # Finish — Pre-Completion Verification Workflow
 
-A checklist-driven workflow that verifies work is actually complete before considering a task done. Run through every step in order. Do not skip steps. If a step fails, fix the issue and re-run that step before proceeding.
+A targeted workflow for verifying that a change is complete. Choose checks based on the files and risk involved, and report anything unavailable or still failing.
 
 ## Step 1: Identify What Changed
 
@@ -13,7 +13,7 @@ Run `git diff --stat` and `git diff` to understand the full scope of changes. Ru
 
 ## Step 2: Run Tests
 
-Detect the project's test framework and run the full test suite.
+Run the smallest relevant test suite for the changed behavior. Run the full suite when the project is small or the change has broad impact.
 
 Detection strategy — check in order, use the first match:
 
@@ -27,11 +27,11 @@ Detection strategy — check in order, use the first match:
 
 If no test framework is detected, state this explicitly and skip to Step 3.
 
-If tests fail, fix the failures. Re-run until they pass. Do not proceed with failing tests.
+If tests fail, determine whether the failure is caused by the change. Fix relevant failures or report unrelated failures clearly.
 
 ## Step 3: Build and Lint
 
-Run the project's build and lint tooling to catch compilation errors and style issues.
+Run the project's relevant build and lint tooling when the change affects code covered by those checks.
 
 | Language | Command |
 |----------|---------|
@@ -44,11 +44,10 @@ If a `justfile` or `Makefile` has a `check` or `lint` target, prefer that.
 
 Fix any issues found. Re-run until clean.
 
-## Step 4: Invoke /simplify
+## Step 4: Optional simplification
 
-Run the `/simplify` skill. This reviews the changed code for reuse opportunities, code quality, and efficiency. Follow its recommendations and apply fixes.
+If `/simplify` is available and the change would benefit from a focused cleanup pass, invoke it and consider its recommendations.
 
-IMPORTANT: Actually invoke `/simplify` as a slash command. Do not replicate its behavior manually.
 
 ## Step 5: Diff Review
 
@@ -67,14 +66,12 @@ If issues are found, fix them. Re-run Steps 2–3 if the fixes are non-trivial.
 
 Report what was verified:
 
-- [ ] Tests pass — name the command run and result
-- [ ] Build/lint clean — name the command run and result
-- [ ] /simplify applied — note any changes made
+- [ ] Relevant tests pass — name the command run and result
+- [ ] Relevant build/lint checks are clean — name the command run and result
+- [ ] Optional simplification considered — note any changes made
 - [ ] Diff reviewed — note any issues found and fixed
 - [ ] No secrets or debug artifacts in the diff
 
 State clearly: **"Task verified complete"** or **"Task has unresolved issues:"** followed by what remains.
 
 ## Related Skills
-
-For qualitative code analysis beyond this checklist, see **soft-harness-create** and **soft-harness-run**.

@@ -1,6 +1,6 @@
 # Example script: Cow
 
-One complete piece in the voice, end to end, so the moves in `voice-guide.md` can be seen
+One complete piece in the voice, end to end, so the rules in `SKILL.md` can be seen
 working together rather than as isolated rules.
 
 It is a Rust Corner video script, which means it carries the full ritual furniture. A README
@@ -191,6 +191,8 @@ GOODBYE!` with `GOODBYE` capitalised.
 | `you` + `your` per 1k | 11.5 | 17 |
 | `I` per 1k words | 5.8 | 2.4 |
 | Banned register | none | none |
+
+The rules ask for fewer `!` than this script and the corpus carry. Treat its rate as a ceiling for a script, not a target.
 
 Two of these misses are instructive.
 

@@ -9,7 +9,7 @@
 - 5. Billboard Text That Always Faces the Camera
 - 6. Render-to-Texture (Camera Rendering to Image Used as Material)
 
-Minimal, copy-pasteable examples for frequent Bevy 0.15+ rendering tasks.
+Minimal, copy-pasteable examples for frequent Bevy 0.19 rendering tasks.
 
 ---
 
@@ -343,7 +343,8 @@ fn setup(
         TextColor(Color::WHITE),
         Transform::from_xyz(0.0, 1.2, 0.0).with_scale(Vec3::splat(0.01)), // scale down for 3D space
         Billboard,
-    )).set_parent(cube);
+        ChildOf(cube),
+    ));
 
     // Lighting and camera
     commands.spawn((

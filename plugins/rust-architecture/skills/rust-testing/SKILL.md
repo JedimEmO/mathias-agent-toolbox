@@ -1,6 +1,6 @@
 ---
 name: rust-testing
-description: Use when the user asks about testing Rust code, writing test doubles, creating fakes, organizing test modules, integration vs unit tests, test utilities, test fixtures, test patterns for trait-based dependency injection, test size strategy, or testing HTTP APIs with axum-test.
+description: Use when designing Rust unit, integration, HTTP, fake, fixture, or dependency-injection tests.
 ---
 
 # Rust Testing — Fakes, Organization & Strategy

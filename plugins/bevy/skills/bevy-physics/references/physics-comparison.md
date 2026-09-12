@@ -20,8 +20,8 @@
 
 | Dimension | avian | bevy_rapier |
 |---|---|---|
-| 2D | `avian2d = "0.2"` | `bevy_rapier2d = "0.28"` |
-| 3D | `avian3d = "0.2"` | `bevy_rapier3d = "0.28"` |
+| 2D | `avian2d = "0.7"` | `bevy_rapier2d = "0.36"` |
+| 3D | `avian3d = "0.7"` | `bevy_rapier3d = "0.36"` |
 
 ## Plugin Setup
 
@@ -87,15 +87,15 @@ Key difference: avian uses separate components for linear and angular velocity; 
 ```rust
 // ---- avian ----
 fn collisions(
-    mut started: EventReader<CollisionStarted>,
-    mut ended: EventReader<CollisionEnded>,
+    mut started: MessageReader<CollisionStart>,
+    mut ended: MessageReader<CollisionEnd>,
 ) {
-    for CollisionStarted(a, b) in started.read() { /* ... */ }
-    for CollisionEnded(a, b) in ended.read() { /* ... */ }
+    for event in started.read() { /* event.collider1 and event.collider2 */ }
+    for event in ended.read() { /* event.collider1 and event.collider2 */ }
 }
 
 // ---- bevy_rapier ----
-fn collisions(mut events: EventReader<CollisionEvent>) {
+fn collisions(mut events: MessageReader<CollisionEvent>) {
     for event in events.read() {
         match event {
             CollisionEvent::Started(a, b, _flags) => { /* ... */ }

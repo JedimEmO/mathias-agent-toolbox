@@ -1,11 +1,11 @@
 ---
 name: bevy-input-and-interaction
-description: Use when the user asks about handling keyboard input, mouse input, gamepad/controller input, touch input, picking/raycasting, UI interaction, or input mapping in Bevy. Also triggers for questions about cursor position, mouse clicks on entities, or input abstraction.
+description: Use when implementing Bevy keyboard, mouse, gamepad, touch, picking, UI interaction, or input-mapping behavior.
 ---
 
 # Bevy Input & Interaction — Keyboard, Mouse, Gamepad & Picking
 
-> For system registration, queries, resources, and event fundamentals, see the **bevy-ecs** skill first. This skill builds on those concepts to cover all input handling and entity interaction in Bevy 0.15+.
+> For system registration, queries, resources, and event fundamentals, see the **bevy-ecs** skill first. This skill builds on those concepts to cover all input handling and entity interaction in Bevy 0.19.
 
 ## Keyboard Input
 
@@ -46,7 +46,7 @@ fn keyboard_system(keys: Res<ButtonInput<KeyCode>>) {
 For actual character input (respecting keyboard layout, IME, etc.), use `KeyboardInput` events rather than `ButtonInput`:
 
 ```rust
-fn text_input_system(mut events: EventReader<KeyboardInput>) {
+fn text_input_system(mut events: MessageReader<KeyboardInput>) {
     for event in events.read() {
         if event.state.is_pressed() {
             if let Key::Character(ref char) = event.logical_key {
@@ -135,14 +135,14 @@ fn cursor_ray_3d(
 Use events for relative mouse movement and scroll wheel:
 
 ```rust
-fn mouse_motion_system(mut motion: EventReader<MouseMotion>) {
+fn mouse_motion_system(mut motion: MessageReader<MouseMotion>) {
     for event in motion.read() {
         // event.delta is Vec2 — relative movement in pixels
         info!("Mouse moved: {:?}", event.delta);
     }
 }
 
-fn mouse_scroll_system(mut scroll: EventReader<MouseWheel>) {
+fn mouse_scroll_system(mut scroll: MessageReader<MouseWheel>) {
     for event in scroll.read() {
         // event.x, event.y — scroll amounts
         // event.unit — Lines or Pixels
@@ -153,7 +153,7 @@ fn mouse_scroll_system(mut scroll: EventReader<MouseWheel>) {
 
 ## Gamepad Input
 
-In Bevy 0.15+, gamepads are entities with a `Gamepad` component. Buttons and axes are accessed through the `Gamepad` component directly.
+In Bevy 0.19, gamepads are entities with a `Gamepad` component. Buttons and axes are accessed through the `Gamepad` component directly.
 
 ### Detecting Connected Gamepads
 
@@ -255,13 +255,15 @@ fn touch_system(touches: Res<Touches>) {
 
 Multi-touch finger tracking uses the `touch.id()` to correlate touches across frames. Each finger gets a stable ID for its entire press-move-release lifecycle.
 
-## Picking (0.15+)
+## Picking (Bevy 0.19)
 
-Bevy 0.15 ships a built-in picking system for detecting pointer interactions with entities. No third-party crate needed.
+Bevy 0.19 ships the core `bevy_picking` framework and built-in UI and mesh backends. Enable
+the relevant Bevy features or plugins; custom and third-party backends are also supported.
 
 ### Making Entities Pickable
 
-Entities with meshes are pickable by default when `bevy_picking` is enabled. To explicitly control picking, add or remove the `Pickable` component:
+With the mesh-picking backend enabled, meshes are pickable by default. To explicitly control
+picking, add or remove the `Pickable` component:
 
 ```rust
 fn setup(mut commands: Commands, asset_server: Res<AssetServer>) {
@@ -298,29 +300,29 @@ fn setup(mut commands: Commands) {
     .observe(on_pointer_out);
 }
 
-fn on_click(trigger: Trigger<Pointer<Click>>, mut commands: Commands) {
-    let entity = trigger.target();
+fn on_click(trigger: On<Pointer<Click>>, mut commands: Commands) {
+    let entity = trigger.entity;
     let event = trigger.event();
     info!("Clicked entity {entity:?} at {}", event.pointer_location.position);
 }
 
 fn on_pointer_over(
-    trigger: Trigger<Pointer<Over>>,
+    trigger: On<Pointer<Over>>,
     mut materials: Query<&mut MeshMaterial3d<StandardMaterial>>,
 ) {
     // Highlight on hover
-    let entity = trigger.target();
+    let entity = trigger.entity;
     if let Ok(mut material) = materials.get_mut(entity) {
         // swap to highlight material
     }
 }
 
 fn on_pointer_out(
-    trigger: Trigger<Pointer<Out>>,
+    trigger: On<Pointer<Out>>,
     mut materials: Query<&mut MeshMaterial3d<StandardMaterial>>,
 ) {
     // Remove highlight
-    let entity = trigger.target();
+    let entity = trigger.entity;
     if let Ok(mut material) = materials.get_mut(entity) {
         // restore original material
     }

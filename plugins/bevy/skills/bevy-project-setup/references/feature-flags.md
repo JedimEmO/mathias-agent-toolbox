@@ -14,7 +14,7 @@
 - Example: Minimal 2D Game
 - Example: Headless Server
 
-Feature flags for Bevy 0.15. Disable `default-features` and pick what you need for minimal builds, or keep defaults for full-featured games.
+Feature flags for Bevy 0.19. Disable `default-features` and pick what you need for minimal builds, or keep defaults for full-featured games.
 
 ## Core Features
 
@@ -110,7 +110,7 @@ Feature flags for Bevy 0.15. Disable `default-features` and pick what you need f
 ## Example: Minimal 2D Game
 
 ```toml
-bevy = { version = "0.15", default-features = false, features = [
+bevy = { version = "0.19", default-features = false, features = [
     "bevy_asset",
     "bevy_color",
     "bevy_core_pipeline",
@@ -130,7 +130,7 @@ bevy = { version = "0.15", default-features = false, features = [
 ## Example: Headless Server
 
 ```toml
-bevy = { version = "0.15", default-features = false, features = [
+bevy = { version = "0.19", default-features = false, features = [
     "multi_threaded",
     "serialize",
 ] }

@@ -20,7 +20,7 @@ Complete reference for all available components in dwui.
 
 ## DWUI Components
 
-Source: `/home/mmy/repos/oss/dominator-css-bindgen/crates/dwui/src/components/`
+Source: the current `dwui` crate source and documentation. Verify component names and props against the pinned crate version.
 
 ### Button (`button!`)
 

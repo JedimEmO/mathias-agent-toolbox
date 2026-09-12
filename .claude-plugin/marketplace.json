@@ -36,7 +36,7 @@
     {
       "name": "workflow-quality",
       "source": "workflow-quality",
-      "description": "Workflow-quality skills for completion checks, qualitative harness creation, and non-functional code-quality baselines",
+      "description": "Targeted workflow for completion and release-readiness checks",
       "version": "1.0.0"
     },
     {
@@ -67,6 +67,12 @@
       "name": "mathias-voice",
       "source": "mathias-voice",
       "description": "Mathias's teaching voice as a Claude Code output style plus a drafting skill, derived from the Dominator course, dwind series, and Rust Corner video manuscripts",
+      "version": "1.0.0"
+    },
+    {
+      "name": "blender",
+      "source": "blender",
+      "description": "Connect Claude Code and Codex to Blender through the community blender-mcp server",
       "version": "1.0.0"
     }
   ]

@@ -1,6 +1,6 @@
 ---
 name: dwind-tauri
-description: Use when the user asks to build a Tauri desktop application with a dwind/dominator frontend, set up Tauri with Rust WASM UI, create Tauri commands or IPC, handle Tauri events from dwind, configure tauri.conf.json, or asks about Tauri + dwind project structure.
+description: Use when building a Tauri 2 desktop app with a dwind/dominator frontend, including Rust commands, IPC, events, and configuration.
 ---
 
 # Tauri + Dwind Desktop App
@@ -67,8 +67,8 @@ exclude = ["src-tauri"]
 
 [dependencies]
 dominator = "0.5"
-dwind = "0.7"
-dwind-macros = "0.7"
+dwind = "0.8"
+dwind-macros = "0.5"
 futures-signals = "0.3"
 futures-signals-component-macro = { version = "0.4", features = ["dominator"] }
 wasm-bindgen = "0.2"
@@ -123,8 +123,8 @@ The `<link data-trunk rel="rust">` directive tells Trunk to compile the Rust cra
 ### lib.rs — WASM Entry Point
 
 ```rust
-#[macro_use]
-extern crate dwind_macros;
+use dwind_macros::dwclass;
+use dwind::prelude::*;
 
 use wasm_bindgen::prelude::*;
 use std::rc::Rc;
@@ -471,4 +471,4 @@ cd src-tauri && cargo tauri build
 ## Reference App
 
 For a complete working example of Tauri + dwind/dominator with IPC, events, file access, and audio playback:
-`/home/mmy/repos/ai/experiments/karaokemonster/crates/karaoke-app/`
+the repository's Tauri scaffold template

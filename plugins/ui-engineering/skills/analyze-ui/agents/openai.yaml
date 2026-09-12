@@ -1,4 +1,0 @@
-interface:
-  display_name: "Analyze UI"
-  short_description: "Evaluate UI/UX quality and test evidence."
-  default_prompt: "Use $analyze-ui to evaluate whether this app is satisfactory from a UI/UX and testability perspective."

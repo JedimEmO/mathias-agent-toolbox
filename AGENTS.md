@@ -1,104 +1,38 @@
 # AGENTS.md
 
-This file provides guidance to Codex when working in this repository.
+This repository contains shared Claude Code and Codex plugins. Source content lives under
+`plugins/`; generated book directories are disposable.
 
-## Project Overview
+## Source of truth
 
-This repository is a shared Claude Code and Codex plugin marketplace. The reusable content is documentation-driven: skills, references, templates, scripts, and related plugin assets live under `plugins/`. The static reference book is generated with mdBook and published through GitHub Pages.
+- Keep shared skills and references in `plugins/PLUGIN_NAME/skills/`; do not duplicate them for Codex.
+- When install-facing metadata changes, update both marketplace registries and both per-plugin manifests.
+- Codex manifests point to shared skills with `"skills": "./skills/"`.
+- If a plugin has `.mcp.json`, wire it explicitly with `"mcpServers": "./.mcp.json"` in the Codex manifest.
 
-## Build Commands
+## Relevant checks
 
-```bash
-./build-book.sh          # Build static HTML book to book-out/
-./build-book.sh serve    # Live-reload dev server
-./build-book.sh clean    # Remove generated book-src/ and book-out/
-tools/audit-skills.mjs   # Check skill metadata and progressive-disclosure hygiene
-```
-
-The build pipeline runs `tools/generate-summary.mjs`, which walks `plugins/`, generates `book-src/SUMMARY.md`, symlinks Markdown files into `book-src/`, then runs `mdbook build`.
-
-## Plugin Structure
-
-Shared plugin content lives under `plugins/PLUGIN_NAME/` and should not be duplicated per platform:
-
-```text
-plugins/PLUGIN_NAME/
-├── .claude-plugin/
-│   └── plugin.json
-├── .codex-plugin/
-│   └── plugin.json
-└── skills/
-    └── SKILL_NAME/
-        ├── SKILL.md
-        └── references/
-```
-
-The `skills/`, `references/`, templates, scripts, and other content files are the source of truth for both Claude Code and Codex.
-
-A plugin may also ship an `output-styles/` directory of Claude Code output styles. Codex has no equivalent, so a plugin shipping an output style should expose the same guidance as a skill under `skills/`, and the Codex manifest points at that skill tree as usual.
-
-## Dual Marketplace Metadata
-
-When adding, renaming, moving, or changing plugin install-facing metadata, update both platform surfaces:
-
-- Claude marketplace registry: `.claude-plugin/marketplace.json`
-- Codex marketplace registry: `.agents/plugins/marketplace.json`
-- Claude per-plugin manifest: `plugins/PLUGIN_NAME/.claude-plugin/plugin.json`
-- Codex per-plugin manifest: `plugins/PLUGIN_NAME/.codex-plugin/plugin.json`
-
-Keep descriptions, versions, author or publisher metadata, keywords, categories, and display metadata aligned where both systems support them. Do not duplicate skill content for Codex; point the Codex manifest at the existing skill tree with:
-
-```json
-{
-  "skills": "./skills/"
-}
-```
-
-Codex marketplace entries should use a `source.path` relative to the marketplace root, include `policy.installation`, `policy.authentication`, and `category`, and point at the shared plugin directory.
-
-## MCP Configuration
-
-If a plugin includes plugin-local MCP configuration in `.mcp.json`, keep that file in the plugin root and wire it explicitly in the Codex manifest:
-
-```json
-{
-  "mcpServers": "./.mcp.json"
-}
-```
-
-Do not assume Codex auto-discovers `.mcp.json` just because the file exists. Claude MCP behavior should remain represented by the Claude plugin structure and any Claude-specific marketplace requirements.
-
-## Install And Test Notes
-
-Claude Code marketplace usage:
-
-```text
-/plugin marketplace add https://github.com/JedimEmO/mathias-agent-toolbox.git
-/plugin install <plugin-name>@mathias-agent-toolbox
-```
-
-Codex marketplace usage:
+Run the check that matches the change:
 
 ```bash
-codex plugin marketplace add <repo-or-local-root>
+tools/audit-skills.mjs
+./build-book.sh
 ```
 
-After adding or updating Codex plugin metadata, restart Codex and verify the plugin appears in `/plugins`. For repo-local development, keep `.agents/plugins/marketplace.json` in this repository and point entries at `./plugins/PLUGIN_NAME`.
+Use `./build-book.sh serve` for local book development. Use `./build-book.sh clean` only when
+regenerating disposable `book-src/` and `book-out/` directories.
 
-## Key Files
+## Generated content
 
-- `.claude-plugin/marketplace.json` - Claude plugin registry
-- `.agents/plugins/marketplace.json` - Codex plugin registry
-- `plugins/*/.claude-plugin/plugin.json` - Claude per-plugin metadata
-- `plugins/*/.codex-plugin/plugin.json` - Codex per-plugin metadata
-- `tools/generate-summary.mjs` - discovers plugin Markdown and generates mdBook input
-- `tools/audit-skills.mjs` - checks skill metadata and progressive-disclosure hygiene
-- `book.toml` - mdBook config
-- `.github/workflows/deploy-book.yml` - GitHub Pages deployment on pushes to `master`
+Do not edit `book-src/` or `book-out/` directly. The book pipeline generates them from
+`plugins/` through `tools/generate-summary.mjs`.
 
-## Architecture Notes
+Scaffold templates may contain source fixtures, but do not commit `node_modules`, `dist`,
+`target`, or other generated build output.
 
-- `book-src/` and `book-out/` are generated and gitignored; never edit them directly.
-- Build output uses symlinks from `book-src/` to `plugins/`, so edits to plugin Markdown files are visible during `./build-book.sh serve`.
-- `tools/generate-summary.mjs` extracts H1 headings from Markdown files for TOC titles, falling back to humanized filenames.
-- CI is triggered on pushes to `master`, not `main`.
+## Repository metadata
+
+- `.claude-plugin/marketplace.json` is the Claude registry.
+- `.agents/plugins/marketplace.json` is the Codex registry.
+- `.claude-plugin/plugin.json` and `.codex-plugin/plugin.json` hold per-plugin metadata.
+- CI deploys the book on pushes to `master`.

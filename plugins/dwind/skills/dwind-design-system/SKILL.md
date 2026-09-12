@@ -1,6 +1,6 @@
 ---
 name: dwind-design-system
-description: Use when the user asks about design tokens, design system architecture, spacing scales, type scales, color systems, semantic tokens, component spacing conventions, vertical rhythm, dark/light theme token mapping, accessibility contrast ratios, or organizing a design system crate in a dwind/dominator context. Also triggers when the user mentions token hierarchy, baseline grid, or design system structure.
+description: Use when designing tokens, themes, spacing, typography, contrast, or design-system crate structure for dwind/dominator.
 ---
 
 # Dwind Design System — Tokens, Scales & Conventions
@@ -200,8 +200,8 @@ The `lib.rs` calls `dwind::stylesheet()` and injects the design system's generat
 
 ```rust
 // lib.rs
-#[macro_use]
-extern crate dwind_macros;
+use dwind_macros::dwclass;
+use dwind::prelude::*;
 
 pub mod theme;
 pub mod mixins;

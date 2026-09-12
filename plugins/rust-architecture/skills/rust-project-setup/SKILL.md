@@ -1,6 +1,6 @@
 ---
 name: rust-project-setup
-description: Use when the user asks to scaffold a new Rust project, set up a Cargo workspace, configure Cargo.toml, manage workspace dependencies, set up feature flags, decide on crate boundaries, or asks about when to split a single crate into multiple crates.
+description: Use when creating or restructuring a Rust project workspace, including Cargo dependencies, features, and crate boundaries.
 ---
 
 # Rust Project Setup — Workspace Scaffolding & Crate Layout

@@ -1,6 +1,6 @@
 ---
 name: scaffold-desktop
-description: Use when the user asks to scaffold, bootstrap, create, or start a new Tauri 2 desktop application with a dwind/dominator WASM frontend. Also use when they want a working Tauri + dwind starter template, a reference desktop app implementation, or to generate a native desktop app following marketplace best practices.
+description: Use when generating a Tauri 2 desktop starter with a dwind/dominator frontend and testable Rust core.
 ---
 
 # Desktop Scaffold — Tauri 2 Backend + dwind Frontend

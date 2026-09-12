@@ -8,8 +8,8 @@
     },
     {
       "query": "Plan a multi-agent workflow for incident response with human approvals and audit logs.",
-      "expected_skills": ["plan-agentic-system", "agent-observability", "agent-communication"],
-      "expected_behavior": ["Asks discovery questions before architecture", "Identifies approvals and trust boundaries", "Includes tracing and recovery concerns"]
+      "expected_skills": ["agent-decomposition", "agent-observability", "agent-communication"],
+      "expected_behavior": ["Starts from the concrete workflow", "Identifies approvals and trust boundaries", "Includes tracing and recovery concerns"]
     },
     {
       "query": "Design tool schemas for an agent that can create tickets and query customer records.",

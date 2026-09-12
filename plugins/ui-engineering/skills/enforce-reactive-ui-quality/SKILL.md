@@ -1,6 +1,6 @@
 ---
 name: enforce-reactive-ui-quality
-description: Use when the user asks to review, refactor, improve, or enforce UI code quality, reactive UI architecture, component boundaries, state management, render performance, over-rendering prevention, small files, clear responsibilities, or precise reactivity. Applies to frontend code in any framework, especially when UI behavior should update only the components or DOM fragments affected by changed state.
+description: Use when improving frontend state ownership, component boundaries, render performance, or precise reactive updates.
 ---
 
 # Enforce Reactive UI Quality

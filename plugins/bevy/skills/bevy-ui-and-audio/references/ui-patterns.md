@@ -74,7 +74,7 @@ fn spawn_main_menu(mut commands: Commands) {
 fn handle_menu_buttons(
     query: Query<(&Interaction, &MenuButton), Changed<Interaction>>,
     mut next_state: ResMut<NextState<MenuState>>,
-    mut exit: EventWriter<AppExit>,
+    mut exit: MessageWriter<AppExit>,
 ) {
     for (interaction, button) in &query {
         if *interaction == Interaction::Pressed {

@@ -1,6 +1,6 @@
 ---
 name: dwind-styling
-description: Use when the user asks about styling, CSS classes, colors, spacing, layout, responsive design, hover/focus states, animations, visual appearance, or theming in a dwind/dominator context. Also triggers when the user mentions dwclass, utility classes, or breakpoints.
+description: Use when styling dwind/dominator UIs with classes, layout, responsive behavior, themes, states, or animations.
 ---
 
 # Dwind Styling — Utility Classes & Visual Design

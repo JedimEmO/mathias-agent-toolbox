@@ -25,8 +25,8 @@
   - Defining States
   - Registering and Using States
   - Transitioning Between States
-  - Sub-States (Bevy 0.15+)
-  - Computed States (Bevy 0.15+)
+  - Sub-States (Bevy 0.19)
+  - Computed States (Bevy 0.19)
 
 Complete reference for Bevy's scheduling system — schedules, ordering, sets, run conditions, and states.
 
@@ -308,7 +308,7 @@ fn handle_pause(
 
 State transitions are applied during `StateTransition` (which runs between `PreUpdate` and `Update`). `OnExit` runs first, then `OnTransition`, then `OnEnter`.
 
-### Sub-States (Bevy 0.15+)
+### Sub-States (Bevy 0.19)
 
 Sub-states only exist when their parent state has a specific value. When the parent leaves that value, the sub-state is removed entirely.
 
@@ -332,7 +332,7 @@ App::new()
 
 When `AppState` leaves `InGame`, `GamePhase` is automatically removed. When `AppState` re-enters `InGame`, `GamePhase` is re-initialized to its `Default` value.
 
-### Computed States (Bevy 0.15+)
+### Computed States (Bevy 0.19)
 
 Computed states derive their value from one or more other states. You cannot set them manually — they update automatically.
 

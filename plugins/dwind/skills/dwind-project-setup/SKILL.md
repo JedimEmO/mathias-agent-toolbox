@@ -1,6 +1,6 @@
 ---
 name: dwind-project-setup
-description: Use when the user asks to create a new dwind project, set up dwind in an existing project, configure the Rust-to-WASM build pipeline, or asks about dwind project structure, Cargo.toml dependencies, rollup config, or wasm-pack setup.
+description: Use when creating or configuring a dwind Rust/WASM project, including Cargo, Rollup, wasm-pack, and project structure.
 ---
 
 # Dwind Project Setup — Scaffolding & Build Config
@@ -38,8 +38,8 @@ crate-type = ["cdylib"]
 
 [dependencies]
 dominator = "0.5"
-dwind = "0.7"
-dwind-macros = "0.7"
+dwind = "0.8"
+dwind-macros = "0.5"
 futures-signals = "0.3"
 wasm-bindgen = "0.2"
 wasm-bindgen-futures = "0.4"
@@ -48,14 +48,16 @@ console_error_panic_hook = "0.1"
 
 Add the component library as needed:
 ```toml
-dwui = { git = "https://github.com/user/dwind.git" }
+dwui = "0.9"
 ```
+
+Check the `dwui` release's own `dwind` dependency before combining it with a newer Dwind release; the current `dwui` documentation may lag the standalone `dwind` crate and can otherwise resolve two incompatible Dwind lines.
 
 ### lib.rs — Entry Point
 
 ```rust
-#[macro_use]
-extern crate dwind_macros;  // Required for dwclass! / dwclass_signal!
+use dwind_macros::dwclass;
+use dwind::prelude::*;
 
 use wasm_bindgen::prelude::*;
 
@@ -74,7 +76,7 @@ fn app() -> Dom {
 }
 ```
 
-**Critical**: `#[macro_use] extern crate dwind_macros` must be at the crate root. Without it, `dwclass!` is not available.
+Import the macros you use from `dwind_macros`; keep `dwind` and `dwind-macros` versions compatible.
 
 ### index.html
 
@@ -126,13 +128,11 @@ The background gradient makes glass/transparency effects visible.
 }
 ```
 
-For the exact, up-to-date package.json, read the template at:
-`/home/mmy/repos/oss/dwind-dominator-template/package.json`
+Use the project's own `package.json` as the source of truth for frontend tool versions. Keep the Rust/WASM bundler configuration aligned with the current Dwind example or the pinned template used by your project.
 
 ### rollup.config.js
 
-For the exact, up-to-date rollup config, read the template at:
-`/home/mmy/repos/oss/dwind-dominator-template/rollup.config.js`
+Keep `rollup.config.js` checked into the project and update it together with the bundler dependencies; do not rely on a machine-specific template path.
 
 The key setup: `@wasm-tool/rollup-plugin-rust` compiles the Rust crate to WASM automatically. No manual `wasm-pack` commands needed. Dev builds include debug symbols; release uses `-Oz` + wasm-opt.
 
@@ -209,7 +209,4 @@ Key differences from a web app:
 ## Template Reference
 
 For the most up-to-date, working project template with all configuration files:
-- **Web app**: `/home/mmy/repos/oss/dwind-dominator-template/`
-- **Tauri app**: `/home/mmy/repos/ai/experiments/karaokemonster/crates/karaoke-app/`
-
-Read those files when scaffolding a new project to ensure you have the latest dependency versions and build config.
+For a starting point, use the repository's `rust-app-scaffolds` templates or the upstream Dwind repository. Pin the versions you copy and verify them against the current crate documentation before release.

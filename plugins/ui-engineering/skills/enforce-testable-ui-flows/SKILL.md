@@ -1,6 +1,6 @@
 ---
 name: enforce-testable-ui-flows
-description: Use when the user asks to make UI/UX flows, user stories, screens, components, or frontend behavior testable without a live backend. Also use after document-ui-flows output when every documented feature/flow/story must map to small tests through repository, service, port/adapter, dependency-injection, fake store, fixture, mock API, Playwright workflow tests, generated screenshots/videos, evergreen documentation artifacts, or interface patterns instead of hard-coded backend integration.
+description: Use when making frontend flows testable without a live backend by introducing seams, fakes, fixtures, or deterministic browser tests.
 ---
 
 # Enforce Testable UI Flows

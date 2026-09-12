@@ -1,6 +1,6 @@
 ---
 name: bevy-ecosystem
-description: Use when the user asks about third-party Bevy crates, community plugins, which crate to use for a specific feature, Bevy ecosystem recommendations, or when looking for functionality not built into Bevy core. Also triggers for questions about Bevy version compatibility, migration between versions, or keeping up with breaking changes.
+description: Use when choosing Bevy ecosystem crates or checking third-party compatibility and migration concerns.
 ---
 
 # Bevy Ecosystem — Third-Party Crates & Migration
@@ -86,11 +86,11 @@ Bevy releases break things. Every crate must target a specific Bevy version. Her
 
 1. **Look at the crate's `Cargo.toml`** or its README — most ecosystem crates have a compatibility table showing which crate version maps to which Bevy version.
 
-2. **Search for the `bevy-tracking` GitHub label.** Many crate repos use labels like `bevy-0.15` or `bevy-tracking` to track PRs that update to the latest Bevy release.
+2. **Check the crate's release notes or issue tracker.** Some repositories use labels such as `bevy-0.19` to track compatibility work, but labels are only a clue.
 
 3. **Check the crate's latest release date.** If the crate was last published before the Bevy version you are using shipped, it almost certainly does not support it yet.
 
-4. **Look at `Cargo.toml` dependency specification.** A crate specifying `bevy = "0.15"` works with Bevy 0.15.x but not 0.14 or 0.16.
+4. **Look at `Cargo.toml` dependency specification.** A crate specifying `bevy = "0.19"` is targeting the Bevy 0.19 line; it should not be assumed compatible with another major Bevy release.
 
 ### What to do when a crate is behind
 
@@ -103,16 +103,16 @@ Bevy releases break things. Every crate must target a specific Bevy version. Her
 
 ## Migration Strategy
 
-Bevy does not have a stability guarantee yet. Major releases (0.14 to 0.15, etc.) routinely contain breaking changes. Here is how to handle upgrades:
+Bevy does not have a stability guarantee yet. Minor releases routinely contain breaking changes. Treat an upgrade as a migration task, not a dependency-only edit:
 
 ### Where to find migration guides
 
 The official migration guides live at:
 ```
-https://bevyengine.org/learn/migration-guides/
+https://bevy.org/learn/migration-guides/
 ```
 
-Each guide is organized by the Bevy release (e.g., "0.14 to 0.15") and lists every breaking change with before/after code.
+Each guide is organized by the Bevy release and lists the important breaking changes with before/after code.
 
 ### Common breaking change patterns
 

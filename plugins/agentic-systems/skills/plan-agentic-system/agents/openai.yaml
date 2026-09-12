@@ -1,4 +1,0 @@
-interface:
-  display_name: "Plan Agentic System"
-  short_description: "Plan, scope, or design a new agentic system from scratch through an interactive discovery pro..."
-  default_prompt: "Use $plan-agentic-system for this task."
