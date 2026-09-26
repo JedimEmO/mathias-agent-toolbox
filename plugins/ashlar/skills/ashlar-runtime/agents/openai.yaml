@@ -1,0 +1,4 @@
+interface:
+  display_name: "ashlar Runtime"
+  short_description: "Use ashlar colliders, rooms, storeys, damage and LOD at runtime"
+  default_prompt: "Use $ashlar-runtime for this task."

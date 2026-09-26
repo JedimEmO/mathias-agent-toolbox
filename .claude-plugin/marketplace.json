@@ -74,6 +74,12 @@
       "source": "blender",
       "description": "Connect Claude Code and Codex to Blender through the community blender-mcp server",
       "version": "1.0.0"
+    },
+    {
+      "name": "ashlar",
+      "source": "ashlar",
+      "description": "Skills for using the ashlar crates in a Bevy game: procedural buildings and PBR materials authored in Rust, baked by a content step, loaded with AshlarPlugin",
+      "version": "1.0.0"
     }
   ]
 }

@@ -1,0 +1,37 @@
+{
+  "name": "ashlar",
+  "version": "1.0.0",
+  "description": "Skills for using the ashlar crates in a Bevy game: procedural buildings and PBR materials authored in Rust, baked by a content step, loaded with AshlarPlugin",
+  "author": {
+    "name": "JedimEmO",
+    "url": "https://github.com/JedimEmO"
+  },
+  "homepage": "https://jedimemo.github.io/ashlar/",
+  "repository": "https://github.com/JedimEmO/ashlar",
+  "keywords": [
+    "rust",
+    "bevy",
+    "gamedev",
+    "procedural",
+    "buildings",
+    "materials",
+    "level-of-detail"
+  ],
+  "skills": "./skills/",
+  "interface": {
+    "displayName": "ashlar",
+    "shortDescription": "Procedural buildings and materials for Bevy games",
+    "longDescription": "Skills for shipping ashlar content in a Bevy game: the content step and AshlarPlugin, authoring buildings as Rust recipes, choosing and baking materials, and using colliders, rooms, storeys, damage and levels of detail at runtime.",
+    "developerName": "JedimEmO",
+    "category": "Coding",
+    "capabilities": [
+      "Read",
+      "Write"
+    ],
+    "websiteURL": "https://jedimemo.github.io/ashlar/",
+    "defaultPrompt": [
+      "Help me put ashlar buildings into my Bevy game."
+    ],
+    "brandColor": "#D6B270"
+  }
+}

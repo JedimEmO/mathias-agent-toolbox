@@ -1,0 +1,4 @@
+interface:
+  display_name: "ashlar Game Setup"
+  short_description: "Wire ashlar into a Bevy game: content step, AshlarPlugin, assets"
+  default_prompt: "Use $ashlar-game-setup for this task."

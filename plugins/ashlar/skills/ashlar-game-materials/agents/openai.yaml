@@ -1,0 +1,4 @@
+interface:
+  display_name: "ashlar Game Materials"
+  short_description: "Pick, vary and ship ashlar materials for a game"
+  default_prompt: "Use $ashlar-game-materials for this task."

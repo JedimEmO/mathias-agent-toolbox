@@ -1,0 +1,4 @@
+interface:
+  display_name: "ashlar Building Authoring"
+  short_description: "Author game buildings as ashlar Rust recipes"
+  default_prompt: "Use $ashlar-building-authoring for this task."

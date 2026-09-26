@@ -1,0 +1,60 @@
+{
+  "plugin": "ashlar",
+  "scenarios": [
+    {
+      "query": "Add ashlar buildings to my Bevy game; what crates do I need and how do they load?",
+      "expected_skills": [
+        "ashlar-game-setup"
+      ],
+      "expected_behavior": [
+        "Separates the content step from the game",
+        "Keeps tool features out of the shipped game",
+        "Spawns AshlarBuilding with a building and a material library"
+      ]
+    },
+    {
+      "query": "Write a two-storey shop with a door the player can walk through and a room behind it.",
+      "expected_skills": [
+        "ashlar-building-authoring"
+      ],
+      "expected_behavior": [
+        "Authors one element per straight wall run so the doorway is a gap between proxies",
+        "Marks the door cutter as a portal and declares a Room",
+        "Marks floors and liners interior"
+      ]
+    },
+    {
+      "query": "Give each house in my village a different wall colour without making a material per house.",
+      "expected_skills": [
+        "ashlar-game-materials",
+        "ashlar-building-authoring"
+      ],
+      "expected_behavior": [
+        "Uses a per-instance Binding parameter override",
+        "Explains that each distinct value is one bake",
+        "Suggests a small palette of values"
+      ]
+    },
+    {
+      "query": "Hook the ashlar collision proxies up to avian and tell me which room the player is in.",
+      "expected_skills": [
+        "ashlar-runtime"
+      ],
+      "expected_behavior": [
+        "Builds convex hull colliders on AshlarCollider entities",
+        "Transforms the player position into the building frame before Room::contains"
+      ]
+    },
+    {
+      "query": "My ashlar city runs at 20 fps in the browser. How do I speed it up?",
+      "expected_skills": [
+        "ashlar-runtime"
+      ],
+      "expected_behavior": [
+        "Identifies per-entity CPU cost on WebGL2",
+        "Proposes Disabled-based distance streaming and shadow reductions",
+        "Mentions authoring fewer elements and LOD tuning"
+      ]
+    }
+  ]
+}
