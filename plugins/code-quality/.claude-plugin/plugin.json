@@ -1,0 +1,16 @@
+{
+  "name": "code-quality",
+  "description": "Audit the quality of a Rust codebase from measurements: complexity, coverage, CRAP, churn, change coupling, duplication and advisories, ranked so the agent reads the risky code first",
+  "author": {
+    "name": "JedimEmO"
+  },
+  "keywords": [
+    "rust",
+    "code-quality",
+    "audit",
+    "complexity",
+    "coverage",
+    "technical-debt",
+    "refactoring"
+  ]
+}

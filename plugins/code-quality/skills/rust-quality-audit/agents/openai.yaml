@@ -1,0 +1,4 @@
+interface:
+  display_name: "Rust Quality Audit"
+  short_description: "Measure a Rust workspace, read the code the ranking points at, and report findings against a baseline."
+  default_prompt: "Use $rust-quality-audit for this task."

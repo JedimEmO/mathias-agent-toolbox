@@ -2,7 +2,7 @@
 
 [**Browse the plugin reference book**](https://jedimemo.github.io/mathias-agent-toolbox/)
 
-Public Claude Code and Codex plugin marketplace for Rust engineering skills, Bevy game development, and writing in a consistent voice.
+Public Claude Code and Codex plugin marketplace for Rust engineering skills, code-quality audits, Bevy game development, and writing in a consistent voice.
 
 ## Usage
 

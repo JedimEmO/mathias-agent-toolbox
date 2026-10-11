@@ -1,0 +1,45 @@
+{
+  "plugin": "code-quality",
+  "scenarios": [
+    {
+      "query": "Review the code quality of this workspace and tell me what to fix first.",
+      "expected_skills": [
+        "rust-quality-audit"
+      ],
+      "expected_behavior": [
+        "Runs the collector in the quick tier before reading any source file",
+        "Reads the hotspot files and the top-ranked functions, not a sample of the tree",
+        "Every finding cites a number and a file:line",
+        "Reports at most seven findings and says what was skipped"
+      ]
+    },
+    {
+      "query": "Where is the technical debt in this repo? We have good test coverage already.",
+      "expected_skills": [
+        "rust-quality-audit"
+      ],
+      "expected_behavior": [
+        "Runs the full tier or takes an existing LCOV file",
+        "Does not treat line coverage as proof that the tests check behaviour",
+        "Uses --uncovered or mutation testing on a well-covered hotspot before judging its tests"
+      ]
+    },
+    {
+      "query": "We audited this repository in the spring. Has it got better or worse?",
+      "expected_skills": [
+        "rust-quality-audit"
+      ],
+      "expected_behavior": [
+        "Finds quality-baseline.json and reports the comparison the collector prints",
+        "Does not overwrite the baseline before reporting"
+      ]
+    },
+    {
+      "query": "Review this pull request.",
+      "expected_skills": [],
+      "expected_behavior": [
+        "Does not load rust-quality-audit for a single diff"
+      ]
+    }
+  ]
+}

@@ -1,0 +1,38 @@
+{
+  "name": "code-quality",
+  "version": "1.0.0",
+  "description": "Audit the quality of a Rust codebase from measurements: complexity, coverage, CRAP, churn, change coupling, duplication and advisories, ranked so the agent reads the risky code first",
+  "author": {
+    "name": "JedimEmO",
+    "url": "https://github.com/JedimEmO"
+  },
+  "homepage": "https://jedimemo.github.io/mathias-agent-toolbox/",
+  "repository": "https://github.com/JedimEmO/mathias-agent-toolbox",
+  "keywords": [
+    "rust",
+    "code-quality",
+    "audit",
+    "complexity",
+    "coverage",
+    "technical-debt",
+    "refactoring"
+  ],
+  "skills": "./skills/",
+  "interface": {
+    "displayName": "Code Quality",
+    "shortDescription": "Audit a Rust codebase from measurements",
+    "longDescription": "A collector script measures complexity, coverage, CRAP, churn, change coupling, duplication, escape hatches and dependency advisories in a Rust workspace. The skill tells the agent which code to read from that ranking, how to judge it, and how to report findings against a saved baseline.",
+    "developerName": "JedimEmO",
+    "category": "Coding",
+    "capabilities": [
+      "Read",
+      "Write"
+    ],
+    "websiteURL": "https://jedimemo.github.io/mathias-agent-toolbox/",
+    "defaultPrompt": [
+      "Audit the code quality of this Rust workspace.",
+      "Compare this repository with its quality baseline."
+    ],
+    "brandColor": "#0F766E"
+  }
+}

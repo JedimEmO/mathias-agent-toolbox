@@ -27,7 +27,8 @@ plugins/PLUGIN_NAME/
 └── skills/
     └── SKILL_NAME/
         ├── SKILL.md              # YAML frontmatter (name, description, tools) + content
-        └── references/           # Optional supporting docs
+        ├── references/           # Optional supporting docs
+        └── scripts/              # Optional scripts the skill runs; standard library only
 ```
 
 The `skills/`, `references/`, templates, scripts, and other content files are shared source of truth. Do not duplicate skill content for Codex.
