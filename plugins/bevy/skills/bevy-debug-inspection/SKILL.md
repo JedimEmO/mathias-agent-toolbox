@@ -21,13 +21,13 @@ The goal is to make the game interrogable, not merely runnable. A screenshot can
 
 | Problem shape | First useful probes |
 | --- | --- |
-| Compile or API breakage | `cargo check`, Bevy version, feature flags, migration guide, compiler error locality |
+| Compile or API breakage | `cargo check`, Bevy version, feature flags, the **bevy-api** skill, compiler error locality |
 | System not running | Schedule dump, run conditions, state transitions, system set ordering, targeted `info_once!` |
 | Entity missing or wrong data | BRP `world.query`, reflected component snapshot, `Name`, spawn/despawn logs |
 | Blank screen or invisible object | Camera query, visibility query, asset load state, transform/gizmo overlay, screenshot |
 | Bad input or picking | Input resource/event logs, pointer hit debug, focus policy, cursor-to-world probe |
 | Physics/collision bug | Collider/rigid body query, physics debug render, layers/groups, fixed timestep state |
-| UI bug | UI node tree, `Interaction`, focus, z-index, target camera, screenshot by state |
+| UI bug | UI node tree, `Hovered` and `Pressed` (`Interaction` before 0.20), focus, z-index, target camera, screenshot by state |
 | Performance/stutter | Bevy diagnostics, frame-time graph, entity count, trace feature, system timing |
 
 ## Inspection Contract

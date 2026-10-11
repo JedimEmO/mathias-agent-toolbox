@@ -48,7 +48,7 @@ console_error_panic_hook = "0.1"
 
 Add the component library as needed:
 ```toml
-dwui = "0.9"
+dwui = "0.10"
 ```
 
 Check the `dwui` release's own `dwind` dependency before combining it with a newer Dwind release; the current `dwui` documentation may lag the standalone `dwind` crate and can otherwise resolve two incompatible Dwind lines.

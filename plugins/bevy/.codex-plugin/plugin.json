@@ -1,7 +1,7 @@
 {
   "name": "bevy",
   "version": "1.0.0",
-  "description": "Skills for building games and interactive applications with the Bevy ECS game engine in Rust",
+  "description": "Skills for writing Bevy games against the current API: names that changed up to Bevy 0.20, checking signatures against local source, and runtime debugging",
   "author": {
     "name": "JedimEmO",
     "url": "https://github.com/JedimEmO"
@@ -14,14 +14,14 @@
     "game-engine",
     "ecs",
     "gamedev",
-    "rendering",
-    "physics"
+    "migration",
+    "debugging"
   ],
   "skills": "./skills/",
   "interface": {
     "displayName": "Bevy",
-    "shortDescription": "Build Rust games and interactive apps with Bevy",
-    "longDescription": "Skills for Bevy ECS, project setup, rendering, physics, input and interaction, UI, audio, and ecosystem choices for Rust games and interactive applications.",
+    "shortDescription": "Write Bevy code against the current API",
+    "longDescription": "Current API names for Bevy 0.19 and 0.20, the 0.19 to 0.20 upgrade, ecosystem crate compatibility, a rule for checking signatures against local crate source, and a workflow for diagnosing a running game.",
     "developerName": "JedimEmO",
     "category": "Coding",
     "capabilities": [
@@ -30,7 +30,8 @@
     ],
     "websiteURL": "https://jedimemo.github.io/mathias-agent-toolbox/",
     "defaultPrompt": [
-      "Help me build or structure a Bevy game."
+      "Check this Bevy code against the version in my Cargo.lock.",
+      "Help me upgrade this game to Bevy 0.20."
     ],
     "brandColor": "#8B5CF6"
   }

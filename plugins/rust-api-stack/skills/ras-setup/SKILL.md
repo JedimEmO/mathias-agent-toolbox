@@ -200,7 +200,9 @@ impl TaskServiceTrait for TaskServiceImpl {
 #[tokio::main]
 async fn main() -> anyhow::Result<()> {
     let jwt_secret = std::env::var("JWT_SECRET").context("JWT_SECRET must be set")?;
-    let session_service = Arc::new(SessionService::new(SessionConfig::new(jwt_secret)?)?);
+    // Issuer and audience scope the tokens to this service.
+    let session_config = SessionConfig::new(jwt_secret, "task-service", "task-api")?;
+    let session_service = Arc::new(SessionService::new(session_config)?);
     let auth: Arc<dyn AuthProvider> = Arc::new(JwtAuthProvider::new(session_service));
 
     let router = TaskServiceBuilder::new(TaskServiceImpl)

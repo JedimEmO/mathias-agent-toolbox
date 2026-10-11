@@ -1,7 +1,7 @@
 {
   "name": "mathias-voice",
   "version": "1.0.0",
-  "description": "Mathias's teaching voice as a Claude Code output style plus a drafting skill, derived from the Dominator course, dwind series, and Rust Corner video manuscripts",
+  "description": "Mathias's writing voice for documentation, READMEs, decision records, video scripts and lessons, as a drafting skill plus a Claude Code output style",
   "author": {
     "name": "JedimEmO",
     "url": "https://github.com/JedimEmO"
@@ -25,8 +25,8 @@
   "skills": "./skills/",
   "interface": {
     "displayName": "Mathias Voice",
-    "shortDescription": "Write and rewrite prose in Mathias's teaching voice",
-    "longDescription": "A measured specification of Mathias's technical teaching voice, taken from the video manuscripts of the Dominator course, the dwind series and Mathias's Rust Corner. Ships a Claude Code output style that sets the register for every reply, and a skill for drafting, rewriting and checking video scripts, tutorial chapters, blog posts, READMEs and release notes against it. Codex uses the skill; the output style is Claude Code only.",
+    "shortDescription": "Write docs, READMEs, scripts and lessons in Mathias's voice",
+    "longDescription": "A specification of Mathias's technical writing voice, taken from the video manuscripts of the Dominator course, the dwind series and Mathias's Rust Corner, and extended to documentation. The skill loads before an agent writes a README, a guide, a reference page, a decision record, a changelog, a video script or a lesson, and says how the voice bends for each. Claude Code also gets an output style that sets the register for every reply; Codex uses the skill.",
     "developerName": "JedimEmO",
     "category": "Productivity",
     "capabilities": [
@@ -35,10 +35,10 @@
     ],
     "websiteURL": "https://jedimemo.github.io/mathias-agent-toolbox/",
     "defaultPrompt": [
+      "Write the README for this crate in my voice.",
+      "Draft a decision record for this change.",
       "Draft a video script about this in my tone of voice.",
-      "Rewrite this README so it sounds like me.",
-      "Check whether this draft matches my voice and fix what doesn't.",
-      "Turn these notes into a Rust Corner manuscript."
+      "Check whether this draft matches my voice and fix what doesn't."
     ],
     "brandColor": "#B7410E"
   }

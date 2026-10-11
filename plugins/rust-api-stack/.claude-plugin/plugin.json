@@ -1,6 +1,5 @@
 {
   "name": "rust-api-stack",
-  "version": "1.0.0",
   "description": "Skills for building type-safe Rust API Stack services with REST, JSON-RPC, file, and WebSocket APIs via macro-driven code generation",
   "author": {
     "name": "JedimEmO"

@@ -39,7 +39,7 @@ Prefer small, domain-oriented snapshots over full-world dumps:
 ```json
 {
   "case_id": "combat-dodge-hitbox",
-  "bevy_version": "0.18.1",
+  "bevy_version": "0.20.0",
   "git_rev": "abc123",
   "scenario": "combat_dodge",
   "seed": 1,
@@ -137,7 +137,7 @@ Pick the cheapest durable evidence:
 | State transition | Frame-by-frame app test with state assertions |
 | Spawn/despawn bug | Scenario test asserting named entity/component count |
 | Visual visibility bug | Scenario screenshot plus ECS visibility/camera assertions |
-| UI interaction bug | Backend-free UI scenario asserting `Interaction`/state result |
+| UI interaction bug | Backend-free UI scenario asserting `Pressed`/state result |
 | Physics bug | Fixed timestep scenario asserting contact/position/layer behavior |
 | Performance regression | Diagnostics threshold or benchmark-style scenario |
 

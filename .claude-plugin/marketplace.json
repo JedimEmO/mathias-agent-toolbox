@@ -12,74 +12,42 @@
     {
       "name": "dwind",
       "source": "dwind",
-      "description": "Skills for building UIs with the dwind/dominator/futures-signals Rust+WASM stack",
-      "version": "1.0.0"
+      "description": "Skills for building UIs with the dwind/dominator/futures-signals Rust+WASM stack"
     },
     {
       "name": "rust-architecture",
       "source": "rust-architecture",
-      "description": "Opinionated Rust project structuring — workspace layout, DI patterns, testing strategy, and CI tooling",
-      "version": "1.0.0"
+      "description": "Opinionated Rust project structuring — workspace layout, DI patterns, testing strategy, and CI tooling"
     },
     {
       "name": "rust-api-stack",
       "source": "rust-api-stack",
-      "description": "Skills for building type-safe Rust API Stack services with REST, JSON-RPC, file, and WebSocket APIs via macro-driven code generation",
-      "version": "1.0.0"
+      "description": "Skills for building type-safe Rust API Stack services with REST, JSON-RPC, file, and WebSocket APIs via macro-driven code generation"
     },
     {
       "name": "rust-app-scaffolds",
       "source": "rust-app-scaffolds",
-      "description": "Rust application scaffolds for full-stack web apps with Rust API Stack plus dwind and desktop apps with Tauri 2 plus dwind",
-      "version": "1.0.0"
-    },
-    {
-      "name": "workflow-quality",
-      "source": "workflow-quality",
-      "description": "Targeted workflow for completion and release-readiness checks",
-      "version": "1.0.0"
+      "description": "Rust application scaffolds for full-stack web apps with Rust API Stack plus dwind and desktop apps with Tauri 2 plus dwind"
     },
     {
       "name": "bevy",
       "source": "bevy",
-      "description": "Skills for building games and interactive applications with the Bevy ECS game engine in Rust",
-      "version": "1.0.0"
-    },
-    {
-      "name": "agentic-systems",
-      "source": "agentic-systems",
-      "description": "Agentic systems architecture — agent decomposition, communication patterns, tool design, state management, and observability for multi-agent applications",
-      "version": "1.0.0"
-    },
-    {
-      "name": "trust-engineering",
-      "source": "trust-engineering",
-      "description": "Aggressive trust-building workflows for testing, verification, regression protection, and security assurance in AI-assisted development",
-      "version": "1.0.0"
-    },
-    {
-      "name": "ui-engineering",
-      "source": "ui-engineering",
-      "description": "Skills for analyzing, evaluating, documenting, testing, and improving user interfaces, interaction behavior, product flows, reactive code quality, evergreen UI documentation, and UX implementation details",
-      "version": "1.0.0"
+      "description": "Skills for writing Bevy games against the current API: names that changed up to Bevy 0.20, checking signatures against local source, and runtime debugging"
     },
     {
       "name": "mathias-voice",
       "source": "mathias-voice",
-      "description": "Mathias's teaching voice as a Claude Code output style plus a drafting skill, derived from the Dominator course, dwind series, and Rust Corner video manuscripts",
-      "version": "1.0.0"
+      "description": "Mathias's writing voice for documentation, READMEs, decision records, video scripts and lessons, as a drafting skill plus a Claude Code output style"
     },
     {
       "name": "blender",
       "source": "blender",
-      "description": "Connect Claude Code and Codex to Blender through the community blender-mcp server",
-      "version": "1.0.0"
+      "description": "Connect Claude Code and Codex to Blender through the community blender-mcp server"
     },
     {
       "name": "ashlar",
       "source": "ashlar",
-      "description": "Skills for using the ashlar crates in a Bevy game: procedural buildings and PBR materials authored in Rust, baked by a content step, loaded with AshlarPlugin",
-      "version": "1.0.0"
+      "description": "Skills for using the ashlar crates in a Bevy game: procedural buildings and PBR materials authored in Rust, baked by a content step, loaded with AshlarPlugin"
     }
   ]
 }

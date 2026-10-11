@@ -40,7 +40,7 @@ The scaffold already includes real JWT auth via `SessionService` + `LocalUserPro
 1. **Add users** — call `local_provider.add_user()` in `main.rs`, or replace `LocalUserProvider` with a database-backed provider
 2. **Per-user permissions** — replace `StaticPermissions` with a custom `UserPermissions` impl that looks up permissions per user
 3. **OAuth2** — add `ras-identity-oauth2` and register an `OAuth2Provider` alongside (or instead of) the local provider
-4. **Session config** — adjust `SessionConfig` in `main.rs` (JWT secret, TTL, algorithm)
+4. **Session config** — adjust `SessionConfig` in `main.rs` (JWT secret, issuer and audience, TTL, algorithm)
 
 ## Adding Observability
 

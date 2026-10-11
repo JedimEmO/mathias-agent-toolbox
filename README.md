@@ -2,7 +2,7 @@
 
 [**Browse the plugin reference book**](https://jedimemo.github.io/mathias-agent-toolbox/)
 
-Public Claude Code and Codex plugin marketplace for reusable agent workflows, engineering skills, Rust tooling, and UI quality workflows.
+Public Claude Code and Codex plugin marketplace for Rust engineering skills, Bevy game development, and writing in a consistent voice.
 
 ## Usage
 
@@ -53,10 +53,12 @@ Claude entry in `.claude-plugin/marketplace.json`:
 {
   "name": "my-plugin",
   "source": "my-plugin",
-  "description": "What it does",
-  "version": "1.0.0"
+  "description": "What it does"
 }
 ```
+
+Leave `version` out, here and in the plugin's `.claude-plugin/plugin.json`. Claude Code then
+uses the commit SHA, so installed copies pick up every push.
 
 The `source` is relative to `plugins/` (configured via `pluginRoot`).
 

@@ -1,7 +1,6 @@
 {
   "name": "mathias-voice",
-  "version": "1.0.0",
-  "description": "Mathias's teaching voice as a Claude Code output style plus a drafting skill, derived from the Dominator course, dwind series, and Rust Corner video manuscripts",
+  "description": "Mathias's writing voice for documentation, READMEs, decision records, video scripts and lessons, as a drafting skill plus a Claude Code output style",
   "author": {
     "name": "JedimEmO"
   },

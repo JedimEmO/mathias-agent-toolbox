@@ -13,7 +13,7 @@ Use this when a Bevy project needs a reusable, agent-readable debugging surface.
 
 ## Feature Gate
 
-For Bevy 0.18-style feature names, start with:
+These feature names hold for Bevy 0.18 through 0.20. Start with:
 
 ```toml
 [features]

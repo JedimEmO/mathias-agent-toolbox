@@ -1,7 +1,6 @@
 {
   "name": "bevy",
-  "version": "1.0.0",
-  "description": "Skills for building games and interactive applications with the Bevy ECS game engine in Rust",
+  "description": "Skills for writing Bevy games against the current API: names that changed up to Bevy 0.20, checking signatures against local source, and runtime debugging",
   "author": {
     "name": "JedimEmO"
   },
@@ -11,7 +10,7 @@
     "game-engine",
     "ecs",
     "gamedev",
-    "rendering",
-    "physics"
+    "migration",
+    "debugging"
   ]
 }

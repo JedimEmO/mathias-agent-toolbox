@@ -76,7 +76,9 @@ async fn main() -> Result<()> {
     // Session: JWT creation + validation. Rust API Stack rejects short or placeholder secrets.
     let jwt_secret = std::env::var("JWT_SECRET")
         .unwrap_or_else(|_| "dev-only-secret-change-before-production-32-bytes".to_string());
-    let session_config = SessionConfig::new(jwt_secret).context("invalid JWT session config")?;
+    // Issuer and audience scope tokens to this service; rename them with the app.
+    let session_config = SessionConfig::new(jwt_secret, "app-service", "app-api")
+        .context("invalid JWT session config")?;
     let permissions = Arc::new(StaticPermissions::new(vec!["items:write".into()]));
     let session_service =
         Arc::new(SessionService::new(session_config)?.with_permissions(permissions));

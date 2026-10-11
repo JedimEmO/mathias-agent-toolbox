@@ -1,0 +1,4 @@
+interface:
+  display_name: "Bevy API"
+  short_description: "Current Bevy 0.19 and 0.20 API names, and how to check them against local source."
+  default_prompt: "Use $bevy-api for this task."

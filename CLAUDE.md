@@ -14,7 +14,7 @@ A shared Claude Code and Codex plugin marketplace - a curated collection of skil
 ./build-book.sh clean    # Remove generated book-src/ and book-out/
 ```
 
-The build pipeline: `generate-summary.py` walks `plugins/`, generates `book-src/SUMMARY.md`, symlinks all `.md` files into `book-src/`, then runs `mdbook build`.
+The build pipeline: `tools/generate-summary.mjs` walks `plugins/`, generates `book-src/SUMMARY.md`, symlinks all `.md` files into `book-src/`, then runs `mdbook build`.
 
 ## Plugin Structure
 
@@ -22,7 +22,7 @@ Each plugin lives under `plugins/` and must be registered for both Claude Code a
 
 ```
 plugins/PLUGIN_NAME/
-├── .claude-plugin/plugin.json    # Claude name, version, description
+├── .claude-plugin/plugin.json    # Claude name and description; no version (see below)
 ├── .codex-plugin/plugin.json     # Codex manifest; points at ./skills/
 └── skills/
     └── SKILL_NAME/
@@ -33,6 +33,12 @@ plugins/PLUGIN_NAME/
 The `skills/`, `references/`, templates, scripts, and other content files are shared source of truth. Do not duplicate skill content for Codex.
 
 A plugin may also ship an `output-styles/` directory of Claude Code output styles (Markdown with `name`, `description`, and optional `keep-coding-instructions` frontmatter). Codex has no output styles, so any plugin shipping one should also expose the same guidance as a skill.
+
+## Versions
+
+Do not add `version` to a Claude `plugin.json` or to an entry in `.claude-plugin/marketplace.json`.
+Without one, Claude Code uses the commit SHA as the version, so every push reaches installed
+copies. A pinned version that nobody bumps leaves installs stale; that happened here for months.
 
 ## Dual Marketplace Metadata
 
@@ -51,7 +57,8 @@ Codex manifests should point at shared skills with `"skills": "./skills/"`. If a
 - `.agents/plugins/marketplace.json` — Codex plugin registry
 - `plugins/*/.claude-plugin/plugin.json` — Claude per-plugin metadata
 - `plugins/*/.codex-plugin/plugin.json` — Codex per-plugin metadata
-- `generate-summary.py` — auto-discovers plugins and generates mdBook SUMMARY.md
+- `tools/generate-summary.mjs` — auto-discovers plugins and generates mdBook SUMMARY.md
+- `tools/audit-skills.mjs` — checks skill frontmatter and reference structure; run it after editing a skill
 - `book.toml` — mdBook config (source: `book-src/`, output: `book-out/`)
 - `.github/workflows/deploy-book.yml` — CI deploys to GitHub Pages on push to master
 
@@ -59,5 +66,5 @@ Codex manifests should point at shared skills with `"skills": "./skills/"`. If a
 
 - `book-src/` and `book-out/` are generated (gitignored) — never edit directly
 - Build uses symlinks from `book-src/` to `plugins/` source files, so edits to plugin `.md` files are immediately visible during `serve`
-- `generate-summary.py` extracts H1 headings from `.md` files for TOC titles, falling back to humanized filenames
+- `tools/generate-summary.mjs` extracts H1 headings from `.md` files for TOC titles, falling back to humanized filenames
 - CI is triggered on pushes to `master` (not main)

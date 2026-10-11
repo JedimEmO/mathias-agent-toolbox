@@ -1,0 +1,45 @@
+{
+  "plugin": "mathias-voice",
+  "scenarios": [
+    {
+      "query": "Write the README for this crate.",
+      "expected_skills": [
+        "write-in-my-voice"
+      ],
+      "expected_behavior": [
+        "Loads the skill before drafting",
+        "Opens with what the crate is, then the problem, then the smallest example",
+        "No exclamation marks, hype words or video furniture"
+      ]
+    },
+    {
+      "query": "Update the guide and the API reference for the new retry option, and add a decision record.",
+      "expected_skills": [
+        "write-in-my-voice"
+      ],
+      "expected_behavior": [
+        "Writes the guide with we and imperative steps, and the reference without narration",
+        "Describes the current behaviour in the guide and keeps the history in the decision record",
+        "States the cost of the decision"
+      ]
+    },
+    {
+      "query": "Turn these notes into a Rust Corner manuscript.",
+      "expected_skills": [
+        "write-in-my-voice"
+      ],
+      "expected_behavior": [
+        "Uses the ritual opening and sign-off",
+        "Problem before solution with a small example",
+        "Breaks lines at clause boundaries"
+      ]
+    },
+    {
+      "query": "Fix the off-by-one in the pagination helper.",
+      "expected_skills": [],
+      "expected_behavior": [
+        "Does not load the voice skill for a code-only change"
+      ]
+    }
+  ]
+}

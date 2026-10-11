@@ -37,9 +37,13 @@ commit message.
 
 - **write-in-my-voice** - The language rules of the voice, condensed to one file: person,
   sentence and line shape, the order of an explanation, the signature moves, the word lists,
-  punctuation, and a check to run before handing over a draft. It applies to any prose, from
-  a commit message to a course chapter. Works with or without the output style active, and
-  it is the entry point for Codex, which has no output styles.
+  punctuation, and a check to run before handing over a draft. It loads for any prose kept in
+  a repository or published, from a README to a course chapter. Works with or without the
+  output style active, and it is the entry point for Codex, which has no output styles.
+
+`skills/write-in-my-voice/references/docs.md` says how the voice bends for documentation:
+READMEs, guides, reference pages, decision records, changelogs and Rust doc comments, with a
+short example of each.
 
 `skills/write-in-my-voice/references/rituals.md` holds the openings and sign-offs that only
 published video scripts and lessons carry.
@@ -52,5 +56,5 @@ the voice, with the numbers it scored. It is the fastest way to see what the rul
 Use the output style when you want everything in a session to sound right, including
 Claude's own explanations while you work.
 
-Use the skill when you are authoring a specific artifact, or when you want a draft audited
-against the voice rather than written in it.
+The skill loads on its own when an agent writes documentation or long-form prose, and you can
+name it when you want a draft audited against the voice instead of written in it.

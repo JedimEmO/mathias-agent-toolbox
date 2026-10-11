@@ -1,15 +1,19 @@
 ---
 name: write-in-my-voice
-description: Use when the user asks to write, rewrite, edit, or review prose in Mathias's voice, including technical writing, lessons, scripts, or release notes.
+description: Use before writing or editing prose that Mathias will publish or keep in a repository - READMEs, guides and manuals, crate and module docs, decision records and design docs, changelogs and release notes, blog posts, video scripts and lessons. Also use to rewrite or review a draft against the voice. Load it before drafting, and tell any subagent that writes documentation to load it too.
 ---
 
 # Write in my voice
 
 These are the language rules for Mathias's prose.
-They apply to any text, from a commit message to a course chapter.
+They apply to any text a person will read, from a README to a course chapter.
 
 The observations below come from long-form teaching prose.
-Use them as guardrails, not quotas; a release note or a chat reply may need a different shape.
+Use them as guardrails, not quotas; a reference page or a changelog needs a different shape,
+and `references/docs.md` says which.
+
+Load this before drafting, so the piece is written in the voice and not translated into it afterwards.
+When a subagent writes the prose, it needs these rules too; name this skill in its instructions.
 
 The reader is a competent peer who needs the *why*, not a beginner who needs the basics restated.
 
@@ -35,6 +39,7 @@ The reader is a competent peer who needs the *why*, not a beginner who needs the
 - In manuscripts and Markdown source, break lines at clause boundaries, roughly every 14 words. A sentence may span lines. The reason is that clauses become visible and diffs stay small; rendered output does not change.
 - Paragraphs are two or three lines, four when a beat needs the room, then a blank line.
 - In chat replies, keep the short-clause rhythm without the hard breaks.
+- Tables, badge rows and link lists are not prose; leave their lines whole. Rust doc comments wrap at the project's `rustfmt` width.
 - Prose first. A list is for genuinely enumerable things, never for two sentences that could be a paragraph.
 
 ## Order
@@ -95,8 +100,21 @@ split long sentences at their clauses, and name the objection the original ignor
 Where the source gives a constraint without its reason, mark it for the author rather than invent one.
 Report what changed in one short paragraph.
 
+## Documentation
+
+Read `references/docs.md` before writing a README, a guide, a reference page, a decision record,
+a changelog or Rust doc comments. It gives the shape of each, with short examples.
+
+The parts that matter most:
+
+- Decide whether a section is a guide or a reference. A guide uses `we` and the imperative; a reference states what is true, often with no subject.
+- Front-load. The first two lines say what the thing is and who it is for.
+- Describe what is true now. History goes in a decision record or a changelog, never in a guide.
+- Leave out working labels: phase numbers, ticket IDs and names coined during the work.
+- Use the moves sparingly, and not at all in reference text. No exclamation marks.
+
 ## Published long-form
 
 A video script or a lesson adds fixed openings and sign-offs on top of these rules.
 They are in `references/rituals.md`, and `references/example-script.md` is a complete script with every move annotated.
-Nothing else gets that furniture.
+Nothing else gets that furniture; documentation least of all.

@@ -1,6 +1,5 @@
 {
   "name": "ashlar",
-  "version": "1.0.0",
   "description": "Skills for using the ashlar crates in a Bevy game: procedural buildings and PBR materials authored in Rust, baked by a content step, loaded with AshlarPlugin",
   "author": {
     "name": "JedimEmO"

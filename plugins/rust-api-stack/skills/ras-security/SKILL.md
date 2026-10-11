@@ -92,10 +92,14 @@ let router = TaskServiceBuilder::new(service_impl)
 use ras_identity_session::{JwtAuthProvider, SessionConfig, SessionService};
 use std::sync::Arc;
 
-let mut config = SessionConfig::new(
+// Issuer and audience are required: a token minted by another service that
+// shares the secret is rejected. `SessionConfig::new_unscoped(secret)` opts out
+// for a single-service deployment.
+let config = SessionConfig::new(
     std::env::var("JWT_SECRET").expect("JWT_SECRET must be set"),
+    "task-service",
+    "task-api",
 )?;
-config.refresh_enabled = false;
 
 let session_service = Arc::new(SessionService::new(config)?);
 

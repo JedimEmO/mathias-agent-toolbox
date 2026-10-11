@@ -3,18 +3,36 @@
   "scenarios": [
     {
       "query": "My Bevy game opens to a blank window. Help me debug it with runtime evidence.",
-      "expected_skills": ["bevy-debug-inspection"],
-      "expected_behavior": ["Builds a narrow reproduction", "Correlates screenshots with ECS state", "Checks camera, visibility, assets, and schedules"]
+      "expected_skills": [
+        "bevy-debug-inspection"
+      ],
+      "expected_behavior": [
+        "Builds a narrow reproduction",
+        "Correlates screenshots with ECS state",
+        "Checks camera, visibility, assets, and schedules"
+      ]
     },
     {
-      "query": "Create a Bevy project with fast compile settings, feature flags, and a clean game-state structure.",
-      "expected_skills": ["bevy-project-setup", "bevy-ecs"],
-      "expected_behavior": ["Uses Bevy-specific Cargo guidance", "Explains app/plugin organization", "Avoids unnecessary third-party crates"]
+      "query": "Add a click handler to this mesh and despawn its children when the player dies.",
+      "expected_skills": [
+        "bevy-api"
+      ],
+      "expected_behavior": [
+        "Reads the Bevy version from Cargo.lock first",
+        "Uses the pointer event and hierarchy names for that version",
+        "Checks an unfamiliar signature against the local crate source"
+      ]
     },
     {
-      "query": "Add keyboard movement, mouse picking, physics colliders, and a HUD to my Bevy prototype.",
-      "expected_skills": ["bevy-input-and-interaction", "bevy-physics", "bevy-ui-and-audio"],
-      "expected_behavior": ["Uses ECS resources and queries correctly", "Chooses one physics backend", "Separates gameplay input from UI interaction"]
+      "query": "Upgrade this game from Bevy 0.19 to 0.20.",
+      "expected_skills": [
+        "bevy-api"
+      ],
+      "expected_behavior": [
+        "Checks that every Bevy-dependent crate has a 0.20 release before bumping",
+        "Stops and reports when the physics or networking crate has none",
+        "Lists the changes that compile but look different"
+      ]
     }
   ]
 }

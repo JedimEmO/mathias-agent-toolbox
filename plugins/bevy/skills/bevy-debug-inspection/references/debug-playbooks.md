@@ -55,7 +55,7 @@ Common root causes: wrong schedule, state never entered, run condition false, pl
 2. Check focus capture: UI focus policy, modal overlays, input focus resources, window focus.
 3. For cursor bugs, log window cursor position and camera viewport-to-world conversion.
 4. Enable picking debug for pointer hits, hovered entities, and blocked paths.
-5. Query `Interaction` for buttons only with `Changed<Interaction>` after confirming the button entities exist.
+5. Query `Hovered` and `Pressed` for buttons (`Changed<Interaction>` before 0.20) only after confirming the button entities exist.
 6. Check render layers and target cameras when picking 2D/3D objects.
 
 Common root causes: UI node blocks world input, wrong camera for cursor conversion, window unfocused, target camera mismatch, pointer not over entity bounds, picking backend feature missing, action mapping consumes input.
@@ -63,7 +63,7 @@ Common root causes: UI node blocks world input, wrong camera for cursor conversi
 ## UI Bug
 
 1. Snapshot the UI entity tree: names, active screen/state, root nodes, `Node`, `Display`, `Visibility`, z-index, target camera.
-2. Check buttons: `Button`, `Interaction`, disabled marker, action marker, focus policy, observers/systems.
+2. Check buttons: `Button`, `Hovered`, `Pressed` (`Interaction` before 0.20), disabled marker, action marker, focus policy, observers/systems.
 3. Check text/images: font/image handles loaded, text color alpha, node size, overflow clipping.
 4. Capture screenshots at desktop and smallest supported viewport if layout is involved.
 5. Use deterministic fixtures for menus/settings rather than live backend state.
